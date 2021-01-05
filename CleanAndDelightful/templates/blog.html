@@ -1,0 +1,1363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/css/navigation.css">
+    <link rel="stylesheet" href="../static/css/moretopic.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@700&display=swap');
+
+        dl,
+        ol,
+        ul {
+            margin-bottom: 0rem;
+        }
+
+        hr {
+            display: none;
+            width: 100px;
+            height: 1em;
+
+        }
+
+
+        #jsnav {
+            transition: top 0.3s;
+            display: block;
+            position: fixed;
+            top: 0px;
+            width: 100%;
+            height: auto;
+
+        }
+
+        .space {
+            margin: 4rem auto 0 auto;
+            border-bottom: 1px solid #eee;
+            border-top: 1px solid #eee;
+            max-width: 1160px;
+            width: 100%;
+
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+
+
+            padding: 1.5rem 20px;
+            margin: 0 auto;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+            max-width: 1160px;
+            width: 100%;
+
+
+            overflow: hidden;
+            /* padding: 20px 0; */
+
+        }
+
+        .site-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+            flex-direction: column;
+        }
+
+
+        * {
+
+            font-family: 'Cabin', Helvetica, Arial, sans-serif;
+            margin: 0px;
+            padding: 0px;
+            border: 0px;
+            box-sizing: border-box;
+            line-height: 1.5;
+
+
+        }
+
+        *::selection {
+            color: white;
+            background-color: black;
+        }
+
+        .blog-heading {
+            font-size: 3em;
+            font-weight: 700;
+            color: #000;
+            text-align: center;
+            margin: 1em 0em;
+            margin-top: 2em;
+            width: 100%;
+            max-width: 1160px;
+            font-family: 'Cabin', sans-serif;
+            padding: 0em 2em;
+
+
+
+        }
+
+        #thumbnail {
+
+            margin-bottom: 2em;
+            width: 1160px;
+            height: 677px;
+        }
+
+        .concept {
+            width: 100%;
+            max-width: 1160px;
+            font-size: 23px;
+            padding: 1em 4em;
+            line-height: 2;
+            font-weight: 200;
+            margin-bottom: 2em;
+            text-align: center;
+
+
+        }
+
+        .article-heading {
+            font-size: 2.5em;
+
+            font-weight: 700;
+            color: #000;
+            text-align: center;
+            margin: 2em 0em;
+
+            width: 100%;
+            max-width: 1160px;
+            font-family: 'Cabin', sans-serif;
+            padding: 0em 2em;
+            margin-top: 1em;
+            line-height: 1.6;
+        }
+
+        .article {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0em 1em;
+        }
+
+        .quotes {
+            font-family: 'ShopifySans', Helvetica, Arial, sans-serif;
+            color: lightskyblue;
+            text-transform: uppercase;
+            margin-top: 1em;
+            text-align: center;
+            font-weight: 700;
+            text-shadow: 3px 4px 11px whitesmoke;
+
+
+        }
+
+        .blog-content {
+            width: 100%;
+            max-width: 1160px;
+            font-size: 23px;
+            padding: 1em 4em;
+            line-height: 2;
+            font-weight: 200;
+            margin-bottom: 2em;
+            font-family: sans-serif;
+
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        .h1,
+        .h2,
+        .h3,
+        .h5,
+        .h6 {
+            font-family: 'Cabin', sans-serif;
+            margin-top: .5em;
+            margin-bottom: .25em;
+        }
+
+        img {
+            vertical-align: middle;
+            border-style: none;
+            max-width: 100%;
+            height: auto;
+
+
+
+        }
+
+        .affiliate {
+
+            height: 18.5em;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin-bottom: 10em;
+
+
+
+        }
+
+
+        .classes {
+            margin: 0em 2em;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .products-span {
+            display: block;
+            background: antiquewhite;
+            margin-top: em;
+            height: 0em;
+            margin-top: 1.5em;
+
+
+        }
+
+
+
+
+
+
+        .products {
+            background-color: gray;
+            height: 100%;
+            width: 28em;
+            margin: 0px 2%;
+            background: url('https://images.unsplash.com/photo-1556306510-31ca015374b0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center center/cover;
+            transition: .3s all ease;
+
+        }
+
+        @media only screen and (max-width:1215px) {
+            #thumbnail {
+                margin-bottom: 2em;
+                max-width: 1160px;
+                height: 56vw;
+                width: 93%;
+
+            }
+
+        }
+
+        @media only screen and (max-width: 1000px) {
+            .products {
+                height: 30vw;
+                width: 41vw;
+            }
+
+        }
+
+
+
+
+        @media only screen and (max-width:1078px) {
+            .blog-content {
+                padding: 1em 2em;
+
+            }
+
+            .article {
+
+                margin: 0em 1em;
+            }
+
+        }
+
+        @media only screen and (max-width:695px) {
+            .article-heading {
+                padding: 0em;
+            }
+        }
+
+        @media only screen and (max-width:582px) {
+
+
+            .blog-heading {
+                font-size: 1.7em;
+                margin-top: 4em;
+            }
+
+            .blog-content {
+
+                padding: 1em 0.3em;
+            }
+
+            .concept {
+                padding: 1em 2em;
+                font-size: 18px;
+            }
+
+            .article-heading {
+                font-size: 1.7em;
+            }
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            .h1,
+            .h2,
+            .h3,
+            .h5,
+            .h6 {
+                font-size: 1.3em;
+
+
+            }
+
+
+
+        }
+
+        @media only screen and (max-width:462px) {
+
+            .article-heading {
+
+
+
+
+
+                font-size: 1.3em;
+                padding: 1em;
+
+
+            }
+
+
+
+            .affiliate {
+                height: 11.5em;
+                width: auto;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                margin-bottom: 5em;
+            }
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            .h1,
+            .h2,
+            .h3,
+            .h5,
+            .h6 {
+                font-size: 1.1em;
+
+
+            }
+
+            .products {
+                width: 32vw;
+            }
+
+
+        }
+
+        @media only screen and (max-width:456px) {
+            .blog-content {
+                font-size: 18px;
+
+            }
+        }
+
+        @media only screen and (max-width:354px) {
+            .blog-content {
+                padding: 4em 0em;
+                font-size: 13px;
+
+            }
+
+            .article-heading {
+                font-size: 1.3em;
+                margin: 0em 0em;
+                padding: 2em 0em;
+
+
+            }
+
+            .blog-heading {
+                font-size: 1.45em;
+
+            }
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            .h1,
+            .h2,
+            .h3,
+            .h5,
+            .h6 {
+                font-size: 1.1em;
+
+            }
+
+            .classes {
+                margin: 0em 1em;
+            }
+
+            .affiliate {
+                height: 17.5em;
+                height: 7.5em;
+                width: auto;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                margin-bottom: 6em;
+            }
+
+            .site-content {
+                overflow-x: hidden;
+            }
+
+
+
+
+
+
+        }
+
+        @media only screen and (max-width:285px) {
+            .products-span {
+                transform: translateX(18px);
+
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+        .products:hover {
+            opacity: .7;
+        }
+
+
+
+        #pagination-next {
+            right: 0;
+        }
+
+
+        #pagination-prev .pagination-title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: rotate(-90deg) translate(-62.2%, 0%);
+            transform-origin: top left;
+            /* background: white; */
+            opacity: .7;
+            background: white;
+            color: black;
+
+            text-decoration: none;
+            left: -60px;
+            transition: .3s left;
+            transition: .35s all ease;
+
+
+
+
+
+        }
+
+
+
+        #pagination-next .pagination-title {
+            right: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            transform: rotate(90deg) translate(62.5%, 0);
+            transform-origin: top right;
+
+            opacity: .7;
+            background: white;
+            color: black;
+
+            text-decoration: none;
+            right: -60px;
+            transition: .3s right;
+            transition: .35s all ease;
+
+        }
+
+        .pagination-title {
+            height: 5px;
+            width: 37px;
+            background: aqua;
+            position: fixed;
+
+            height: auto;
+            width: 320px;
+            height: 80px;
+            font-size: 17px;
+
+        }
+
+        .pagination-blog {
+            background: url('https://images.unsplash.com/photo-1543047280-397967875ea9?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center center/cover;
+            height: 320px;
+            position: fixed;
+            width: auto;
+
+            display: flex;
+            align-items: flex-end;
+            z-index: 1;
+
+            font-family: Cabin, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            font-style: normal;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            top: 33%;
+            transition: .35s all ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+
+
+        }
+
+        .pagination-text {
+            visibility: hidden;
+            display: none;
+            color: white;
+            font-size: 17px;
+            text-shadow: 3px 2px 4px black;
+
+            width: 60%;
+            text-align: center;
+
+        }
+
+        .pagination-text button span {
+            width: 20em;
+            position: relative;
+            line-height: 2.3em;
+            top: -.5em;
+            transition: .2s all ease;
+        }
+
+        @media only screen and (max-width:1327px) {
+            .pagination-blog {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav id="jsnav" class="navigation-bar">
+        <div class="navcontainer">
+            <div class="nav-container">
+                <img id="ham" src="../static/icons/ham.png" alt="">
+                <div class="logo" ">
+                    <img src=" ../static/icons/logo2.png"style=" height: 39px;" alt="">
+                </div>
+
+
+
+            </div>
+
+            <ul>
+
+                <li><a href=" #">Home</a></li>
+                <li><a href="#">Foods</a></li>
+                <li><a href="#">Lifestyle</a></li>
+                <li><a href="#">Guide</a></li>
+                <li><a href="#">Facts</a></li>
+                <li><a href="#">Fitness</a></li>
+
+
+            </ul>
+            <div class="search-image">
+                <img src="../static/icons/search.png" alt="">
+
+
+
+            </div>
+
+        </div>
+
+    </nav>
+    <div class="searchbar">
+        <div class="input">
+            <div id="searchcross">
+                <img src="../static/icons/cross.png" alt="">
+
+            </div>
+            <form action="search.html" method="get">
+                <input type="text" placeholder="Enter keyword" spellcheck="false">
+                <button type="submit"> Search </button>
+
+
+            </form>
+
+
+        </div>
+
+    </div>
+
+    <ul class="navlinks">
+
+        <div class="heading-text">
+            Clean and Delightful
+
+
+            <img id="hamcross" src="../static/icons/cross.png" alt="">
+        </div>
+
+        <a href="">
+            <li>Home <div class="arrow"><img src="../static/icons/arrow.png" alt="" style="height: 16px;"></div>
+            </li>
+        </a>
+
+        <a href="#">
+            <li>Foods<div class="arrow"><img src="../static/icons/arrow.png" alt="" style="height: 16px;"></div>
+            </li>
+        </a>
+        <hr>
+        <a href="#">
+            <li>Lifestyle<div class="arrow"><img src="../static/icons/arrow.png" alt="" style="height: 16px;"></div>
+            </li>
+        </a>
+        <hr>
+        <a href="#">
+            <li>Guide<div class="arrow"><img src="../static/icons/arrow.png" alt="" style="height: 16px;"></div>
+            </li>
+        </a>
+        <hr>
+        <a href="#">
+            <li>Facts<div class="arrow"><img src="../static/icons/arrow.png" alt="" style="height: 16px;"></div>
+            </li>
+        </a>
+        <hr>
+        <a href="#">
+            <li>Fitness<div class="arrow"><img src="../static/icons/arrow.png" alt="" style="height: 16px;"></div>
+            </li>
+        </a>
+        <hr>
+        <a href="#">
+            <li>About<div class="arrow"><img src="../static/icons/arrow.png" alt="" style="height: 16px;"></div>
+            </li>
+        </a>
+        <hr>
+        <a href="#">
+            <li>Contact<div class="arrow"><img src="../static/icons/arrow.png" alt="" style="height: 16px;"></div>
+            </li>
+        </a>
+        <div class="social">
+            <div class="title" style="text-align: center;    margin-top: 2em;">
+                Follow
+            </div>
+            <div class="logos">
+                <img src="../static/icons/facebook.png" alt="">
+                <img src="../static/icons/instragram.png" alt="">
+                <img src="../static/icons/gmail.png" alt="">
+
+            </div>
+
+        </div>
+
+
+
+    </ul>
+
+
+    <div id="pagination-prev" class="pagination-blog">
+        <a href="" class="pagination-title">
+
+            Previous blog
+
+
+        </a>
+        <div class="pagination-text">
+            How to be rich in ten days
+            <br>
+            <button
+                style="margin-top: 1em; padding: .4em 1em; width: 7em; height: 2em; overflow: hidden;   transition: .2s all ease;">
+                <span> View
+                    blog</span>
+                <span><img src="../static/icons/arrow.png" style="height: 1em; transform:rotate(180deg);  "
+                        alt=""></span></button>
+
+
+        </div>
+
+    </div>
+    <div id="pagination-next" class="pagination-blog">
+        <a href="" class="pagination-title">
+
+            Next blog
+
+
+        </a>
+        <div class="pagination-text">
+            How to be rich in ten days and earn more than 30millions doller
+            <br>
+            <button
+                style="margin-top: 1em; padding: .4em 1em; width: 7em; height: 2em; overflow: hidden;  transition: .2s all ease;">
+                <span> View
+                    blog</span>
+                <span><img src="../static/icons/arrow.png" style="height: 1em; " alt=""></span></button>
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <!-- ----------------------------------------------------- -->
+    <div class="site-content">
+        <div class="blog-heading">
+            All The Trimmings: The Best Sunday Lunches Across The UK
+
+
+        </div>
+
+        <img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+            alt="" id="thumbnail">
+        <div class=" space">
+            advertisement
+        </div>
+        <div class="concept">
+
+            It’s Sunday lunch weather. Granted, a Sunday Lunch is always a good idea but a colder, greyer climate makes
+            a wholesome, all-the-trimmings roast feel like even more of a treat.
+            <br>
+            <br>
+
+            We love a good Sunday roast here at Ape and it’s fair to say that some places do it better than others. God
+            bless Toby Carvery and everyone’s mum, but if you want something truly special to see out the weekend and
+            fill your belly, you’ll want to try our pick of the best roasts in the UK.
+
+
+        </div>
+        <div class=" space">
+            advertisement
+        </div>
+        <div class="article">
+            <div class="article-heading">
+                Start learning programming from now and start freelancing and tutioning
+            </div>
+            <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1309&q=80"
+                alt="" height="700px" width="1000px">
+
+            <div class="blog-content">
+                <h2>heading</h2>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione molestias, amet, repudiandae excepturi
+                eum omnis nisi ipsam nam earum expedita dolore sequi at modi alias consequatur quasi a cum ipsum.lorem
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas odio repellendus, tempore eos
+                <br>
+                <h2>make migrations</h2>
+                It’s Sunday lunch weather. Granted, a Sunday Lunch is always a good idea but a colder, greyer climate
+                makes
+                a wholesome, all-the-trimmings roast feel like even more of a treat.
+                moll
+                <br>
+                <br>
+
+                itia voluptatibus corrupti.
+                lorem Lorem ipsum d
+                <h2>python</h2>olor sit amet consectetur adipisicing elit. Error labore consequuntur, ullam adipisci
+                sapiente odit numquam iusto commodi eos. Quod ipsum aliquid vero illum eius beatae accusantium similique
+                sapiente alias!
+            </div>
+
+
+
+
+        </div>
+
+
+        <div class="space">
+            advertisement
+        </div>
+
+
+
+        <div class="article">
+            <div class="article-heading">
+                Start learning programming from now and start freelancing
+            </div>
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1352&q=80"
+                alt="" height="700px" width="1000px">
+
+            <div class="blog-content">
+                <h2>heading</h2>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione molestias, amet, repudiandae excepturi
+                eum omnis nisi ipsam nam earum expedita dolore sequi at modi alias consequatur quasi a cum ipsum.lorem
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas odio repellendus, tempore eos
+                <br>
+                <h2>make migrations</h2>
+                It’s Sunday lunch weather. Granted, a Sunday Lunch is always a good idea but a colder, greyer climate
+                makes
+                a wholesome, all-the-trimmings roast feel like even more of a treat.
+                moll
+                <br>
+                <br>
+
+                itia voluptatibus corrupti.
+                lorem Lorem ipsum d
+                <h2>python</h2>olor sit amet consectetur adipisicing elit. Error labore consequuntur, ullam adipisci
+                sapiente odit numquam iusto commodi eos. Quod ipsum aliquid vero illum eius beatae accusantium similique
+                sapiente alias!
+            </div>
+
+
+
+        </div>
+        <div class="space">
+            advertisement
+        </div>
+
+
+
+        <div class="article">
+            <div class="article-heading">
+                Start learning programming from now and start freelancing
+            </div>
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1352&q=80"
+                alt="" height="700px" width="1000px">
+
+            <div class="blog-content">
+                <h2>heading</h2>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione molestias, amet, repudiandae excepturi
+                eum omnis nisi ipsam nam earum expedita dolore sequi at modi alias consequatur quasi a cum ipsum.lorem
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas odio repellendus, tempore eos
+                <br>
+                <h2>make migrations</h2>
+                It’s Sunday lunch weather. Granted, a Sunday Lunch is always a good idea but a colder, greyer climate
+                makes
+                a wholesome, all-the-trimmings roast feel like even more of a treat.
+                moll
+                <br>
+                <br>
+
+                itia voluptatibus corrupti.
+                lorem Lorem ipsum d
+                <h2>python</h2>olor sit amet consectetur adipisicing elit. Error labore consequuntur, ullam adipisci
+                sapiente odit numquam iusto commodi eos. Quod ipsum aliquid vero illum eius beatae accusantium similique
+                sapiente alias!
+                <div class="quotes">
+                    ""dont count the days,let the days be count"""
+                </div>
+            </div>
+
+
+
+        </div>
+        <div class="space">
+            advertisement
+        </div>
+
+        <div class="article-heading">
+            If you like this topic, you may like
+        </div>
+        <div class="affiliate">
+            <div class="classes">
+                <div class="products">
+
+                </div>
+                <span class="products-span">E.D.I.T.H glasses</span>
+
+            </div>
+            <div class="classes">
+                <div class="products">
+
+                </div>
+                <span class="products-span">E.D.I.T.H glasses</span>
+
+            </div>
+
+
+
+
+        </div>
+        <div class="space">
+            advertisement
+        </div>
+
+        <div class="article-heading">
+            IF YOU LIKED OUR BLOG , ALSO CHECK THESE OUT
+
+        </div>
+
+
+
+        <!-- //////////////////////////////////////////////////////// -->
+
+
+
+
+
+    </div>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="items">
+                    <div class="on">
+                        <div class="moreon"
+                            style=" background: url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1202&q=80') center center/cover;">
+                            <div class="text">
+                                View post &rarr;
+                            </div>
+
+                        </div>
+                        <div class="text">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        </div>
+
+                    </div>
+
+
+                    <div class="on">
+                        <div class="moreon"
+                            style=" background: url('https://images.unsplash.com/photo-1586190848861-99aa4a171e90?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80') center center/cover;">
+                            <div class="text">
+                                View post &rarr;
+                            </div>
+                        </div>
+                        <div class="text">
+                            Lorem ipsum dolor sit amet consectetur adi
+                        </div>
+
+                    </div>
+                    <div class="on">
+                        <div class="moreon"
+                            style=" background: url('https://images.unsplash.com/photo-1586816001966-79b736744398?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center center/cover;">
+                            <div class="text">
+                                View post &rarr;
+                            </div>
+                        </div>
+                        <div class="text">
+                            Top Ten Burgers In The World To Eat
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+            <div class="carousel-item">
+                <div class="items">
+                    <div class="on">
+                        <div class="moreon"
+                            style=" background: url('https://images.unsplash.com/photo-1571091655789-405eb7a3a3a8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1352&q=80') center center/cover;">
+                            <div class="text">
+                                View post &rarr;
+                            </div>
+                        </div>
+                        <div class="text">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        </div>
+
+                    </div>
+
+
+                    <div class="on">
+                        <div class="moreon"
+                            style=" background: url('https://images.unsplash.com/photo-1547584370-2cc98b8b8dc8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80') center center/cover;">
+                            <div class="text">
+                                View post &rarr;
+                            </div>
+                        </div>
+                        <div class="text">
+                            Lorem ipsum dolor sit amet consectetur adi
+                        </div>
+
+                    </div>
+                    <div class="on">
+                        <div class="moreon"
+                            style=" background: url('https://images.unsplash.com/photo-1549611016-3a70d82b5040?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1316&q=80') center center/cover;">
+                            <div class="text">
+                                View post &rarr;
+                            </div>
+                        </div>
+                        <div class="text">
+                            Top Ten Burgers In The World To Eat
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+            <div class="carousel-item">
+                <div class="items">
+                    <div class="on">
+                        <div class="moreon"
+                            style=" background: url('https://images.unsplash.com/photo-1550317138-10000687a72b?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1393&q=80') center center/cover;">
+                            <div class="text">
+                                View post &rarr;
+                            </div>
+                        </div>
+                        <div class="text">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        </div>
+
+                    </div>
+
+
+                    <div class="on">
+                        <div class="moreon"
+                            style=" background: url('https://images.unsplash.com/photo-1551987840-f62d9c74ae78?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1176&q=80') center center/cover;">
+                            <div class="text">
+                                View post &rarr;
+                            </div>
+                        </div>
+                        <div class="text">
+                            Lorem ipsum dolor sit amet consectetur adi
+                        </div>
+
+                    </div>
+                    <div class="on">
+                        <div class="moreon"
+                            style=" background: url('https://images.unsplash.com/photo-1549892898-79ac97b31fb2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center center/cover;">
+                            <div class="text">
+                                View post &rarr;
+                            </div>
+                        </div>
+                        <div class="text">
+                            Top Ten Burgers In The World To Eat
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="litem">
+            <div class="item"></div>
+            <div class="text">
+                Lorem ipsum dolor sit amet consectetur adi
+
+            </div>
+
+        </div>
+        <div class="litem">
+            <div class="item"></div>
+            <div class="text">
+                Lorem ipsum dolor sit amet consectetur adi
+
+            </div>
+
+        </div>
+        <div class="litem">
+            <div class="item"></div>
+            <div class="text">
+                Lorem ipsum dolor sit amet consectetur adi
+
+            </div>
+
+        </div>
+        <div class="litem">
+            <div class="item"></div>
+            <div class="text">
+                Lorem ipsum dolor sit amet consectetur adi
+
+            </div>
+
+        </div>
+        <div class="litem">
+            <div class="item"></div>
+            <div class="text">
+                Lorem ipsum dolor sit amet consectetur adi
+
+            </div>
+
+        </div>
+        <div class="litem">
+            <div class="item"></div>
+            <div class="text">
+                Lorem ipsum dolor sit amet consectetur adi
+            </div>
+
+        </div>
+
+
+    </div>
+    {{% include footer.html %}}
+
+
+
+
+    <!-- ////////////////////////////// -->
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script>
+        $('document').ready(function () {
+            let a = document.getElementById('ham');
+            a.addEventListener('click', rotate)
+
+
+            function rotate() {
+
+
+                a.style.transform = 'rotate(-90deg)';
+
+                setTimeout(() => {
+                    a.style.transform = 'rotate(0deg)';
+
+                }, 500);
+
+            }
+
+            $('#searchcross').click(function () {
+                // $('.searchbar').css({ 'z-index': '10', 'visibility': 'visible' })
+                $('.searchbar').css({
+                    'z-index': '-50', 'visibility': 'hidden', 'opacity': '0', 'display': 'none'
+                })
+
+                // $('.searchbar').hide()
+
+            })
+            $('.search-image').click(function () {
+                $('.searchbar').css({ 'z-index': '1000', 'visibility': 'visible', 'opacity': '.99', 'display': 'flex' })
+                // $('.searchbar').show()
+
+            })
+
+            $('.navlinks a li').on('mouseover', function () {
+
+
+                $(this).children('.navlinks a li div ').css({
+
+                    'visibility': 'visible',
+                    'opacity': '1',
+                    'transform': 'translateX(60px)',
+                })
+
+            }).on('mouseleave', function () {
+                $(this).children('.navlinks a li div ').css({
+
+                    'transform': 'translateX(40px)',
+                    'opacity': '0',
+                    'visibility': 'hidden'
+                })
+            })
+
+            const navslide = () => {
+                const burger = document.querySelector('#ham')
+                const nav = document.querySelector('.navlinks')
+                const ham = document.querySelector('#hamcross')
+                burger.addEventListener('click', () => {
+                    nav.classList.toggle('active')
+                })
+                ham.addEventListener('click', function () {
+                    nav.classList.toggle('active')
+                })
+            }
+            navslide()
+
+
+
+        })
+        let button = document.querySelector('.input button')
+        button.addEventListener('click', function () {
+            let searched = document.querySelector('input')
+            searched.value = '';
+
+        })
+
+
+
+
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function () {
+            let prev = document.querySelector('#pagination-prev .pagination-title')
+            let next = document.querySelector('#pagination-next .pagination-title')
+            let site = document.querySelector('.site-content')
+            // prev.style.left = "0px"
+            // next.style.right = "0px"
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 20) {
+                prev.style.left = "0px"
+                next.style.right = "0px"
+
+
+            } else {
+                prev.style.left = "-80px"
+                next.style.right = "-80px"
+
+
+            }
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                document.getElementById("jsnav").style.top = "0px";
+            } else {
+                document.getElementById("jsnav").style.top = "-60px";
+            }
+            prevScrollpos = currentScrollPos;
+        }
+
+
+
+        $('.items .moreon').on('mouseover', function () {
+            $(this).children('.items .moreon .text').css({ 'visibility': 'visible', 'transform': 'translateY(0px)', 'opacity': '1' })
+
+
+
+
+        }).on('mouseleave', function () {
+            $('.items .moreon .text').css({ 'transform': 'translateY(50px)', 'opacity': '0', 'visibility': 'hidden' })
+
+
+
+        })
+        let scroll1 = document.querySelector('.wrapper')
+        scroll1.scrollTo(460, 0)
+
+
+        let back = document.getElementsByClassName('pagination-blog')
+        const bg1 = back[0].style.background
+        back[0].style.setProperty('background', "transparent")
+        const bg2 = back[1].style.background
+        back[1].style.setProperty('background', 'transparent')
+
+        let paginations = document.querySelectorAll('.pagination-blog')[0]
+        let paginations2 = document.querySelectorAll('.pagination-blog')[1]
+        paginations.onmouseover = function () {
+            this.style.width = "40em";
+
+            this.style.background = bg1;
+
+        }
+        paginations2.onmouseover = function () {
+            this.style.width = "40em";
+
+            this.style.background = bg2;
+
+
+
+        }
+        paginations.onmouseleave = function () {
+            this.style.setProperty('background', "transparent")
+            this.style.width = 'auto'
+            this.style.setProperty('background', "transparent")
+
+        }
+        paginations2.onmouseleave = function () {
+            this.style.setProperty('background', "transparent")
+            this.style.width = 'auto'
+
+
+
+        }
+
+        $('.pagination-blog').on('mouseover', function () {
+            $(this).children('.pagination-title').css({
+                'background-color': 'black',
+                'opacity': '.56',
+                'color': 'white'
+            })
+
+            $(this).children('.pagination-text').css({
+                'display': 'block',
+                'visibility': 'visible'
+            })
+        }).on('mouseleave', function () {
+            $(this).children('.pagination-title').css({
+                'background-color': 'white',
+                'opacity': '1',
+                'color': 'black'
+            })
+
+            $(this).children('.pagination-text').css({
+                'display': 'none',
+                'visibility': 'hidden'
+            })
+
+        })
+
+        $('.pagination-text button').on('mouseover', function () {
+            $(this).children('.pagination-text button span').css({
+                'top': '-2.89em'
+            })
+
+        }).on('mouseleave', function () {
+            $(this).children('.pagination-text button span').css({
+                'top': '-.5em'
+            })
+
+        })
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

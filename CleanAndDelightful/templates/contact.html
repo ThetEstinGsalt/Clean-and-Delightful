@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clean and Delightful -Contact</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@700&display=swap');
+
+        * {
+
+            font-family: 'Cabin', Helvetica, Arial, sans-serif;
+            margin: 0px;
+            padding: 0px;
+            border: 0px;
+            box-sizing: border-box;
+            line-height: 1.5;
+        }
+
+        *::selection {
+            color: white;
+            background-color: #000000;
+        }
+
+        header {
+            font-size: 3em;
+        }
+
+        .site-content {
+            width: 100%;
+            height: auto;
+        }
+
+        .box {
+            width: 64%;
+            margin: auto;
+
+            height: 90vh;
+            margin-top: 4em;
+
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            margin-top: 5em;
+
+
+
+        }
+
+        .text {
+
+            font-size: 1.5em;
+            margin-top: 1em;
+        }
+
+
+        input {
+            padding: .375rem 1rem;
+            border: 1px solid transparent;
+            font-size: .85rem !important;
+            border-color: #eee;
+            outline: lightskyblue;
+
+
+        }
+
+
+        label {
+            color: #c9c9c9;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+
+        }
+
+        #messege {
+            border-color: #eee;
+            outline: 1px solid lightskyblue;
+            font-size: 2em;
+            padding: 1em 1em;
+        }
+
+        button {
+            font-family: Cabin, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            font-style: normal;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            background-color: #282828;
+            color: #EEEEEE;
+            padding: .5rem 1rem;
+            font-size: 1.25rem;
+            line-height: 1.5;
+            display: inline-block;
+            font-weight: 400;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            user-select: none;
+            border: 1px solid transparent;
+            padding: .375rem 1rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            transition: background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+            cursor: pointer;
+            border-color: transparent;
+            text-decoration: none !important;
+            width: 11%;
+            height: 3em;
+            margin: 1em 0em;
+        }
+
+        button:hover {
+            background-color: #777;
+        }
+
+        .item {
+            display: flex;
+            flex-direction: column;
+            margin-top: 3em;
+        }
+
+        @media only screen and (max-width: 1068px) {
+            #display {
+                display: none;
+            }
+
+            button {
+                width: 25%;
+                margin: 1em 0em;
+            }
+
+            form {
+                margin-top: 4em;
+            }
+
+            #messege {
+
+                font-size: 1em;
+            }
+        }
+
+        @media only screen and (max-width: 461px) {
+            .box {
+                width: 84%;
+            }
+
+            button {
+                width: 40%;
+            }
+
+            #messege {
+                padding: 0;
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="site-content">
+        <div class="box">
+            <header>Contact</header>
+            <div class="text">
+                Clean and Delightful is an free and reader-friendly blogging site which is dedicated to
+                different topics
+            </div>
+            <br>
+            <br id="display">
+            <div class="text">
+
+                We appreciate feedback and interaction of any sort so please feel free to get in touch. We like to hear
+                from brands, media agencies, PRs, retailers, and our readers.
+            </div>
+            <form action="/contact.html" method="post">
+
+
+
+                <div class="item">
+                    <label for="name">Your name</label>
+                    <input type="text" name="name" id="name">
+                </div>
+                <div class="item">
+                    <label for="email">Your Email</label>
+                    <input type="email" name="email" id="email">
+
+                </div>
+                <div class="item">
+                    <label for="subject">Subject</label>
+
+                    <input type="text" name="subject" id="subject">
+                </div>
+                <div class="item">
+                    <label for="messege">Your messege</label>
+                    <textarea name="messege" id="messege" cols="30" rows="6"></textarea>
+                </div>
+
+
+
+
+
+                <button type="submit">SEND</button>
+
+            </form>
+
+
+        </div>
+
+
+
+
+    </div>
+
+
+
+</body>
+
+</html>

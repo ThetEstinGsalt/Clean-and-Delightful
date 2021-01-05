@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/css/navigation.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+
+
+        @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+
+        *::selection {
+            color: white;
+            background-color: black;
+        }
+
+        .navlinks {
+            left: -12px !important;
+        }
+
+        .heading-text {
+            width: 100% !important;
+        }
+
+        .input button {
+            height: 3.2em;
+            width: 14em;
+        }
+    </style>
+</head>
+
+
+
+<body>
+    <nav id="jsnav" class="navigation-bar">
+        <div class="navcontainer">
+            <div class="nav-container">
+                <img id="ham" src="../static/icons/ham.png" alt="">
+                <div class="logo" ">
+                    <img src=" ../static/icons/logo2.png"style=" height: 39px;" alt="">
+                </div>
+
+
+
+            </div>
+
+            <ul>
+
+                <li><a href=" #">Home</a></li>
+                <li><a href="#">Foods</a></li>
+                <li><a href="#">Lifestyle</a></li>
+                <li><a href="#">Guide</a></li>
+                <li><a href="#">Facts</a></li>
+                <li><a href="#">Fitness</a></li>
+
+
+            </ul>
+            <div class="search-image">
+                <img src="../static/icons/search.png" alt="">
+
+
+
+            </div>
+
+        </div>
+
+    </nav>
+    <div class="searchbar">
+        <div class="input">
+            <div id="searchcross">
+                <img src="../static/icons/cross.png" alt="">
+
+            </div>
+            <form action="search.html" method="get">
+                <input type="text" placeholder="Enter keyword" spellcheck="false">
+                <button type="submit"> Search </button>
+
+
+            </form>
+
+
+        </div>
+
+    </div>
+
+    <ul class="navlinks">
+
+        <div class="heading-text">
+            Clean and Delightful
+
+
+            <img id="hamcross" src="../static/icons/cross.png" alt="">
+        </div>
+
+        <a href="">
+            <li>Home <div class="arrow"><img src="../static/icons/arrow.png" alt="" style="height: 16px;"></div>
+            </li>
+        </a>
+
+        <a href="#">
+            <li>Foods<div class="arrow"><img src="../static/icons/arrow.png" alt="" style="height: 16px;"></div>
+            </li>
+        </a>
+        <hr>
+        <a href="#">
+            <li>Lifestyle<div class="arrow"><img src="../static/icons/arrow.png" alt="" style="height: 16px;"></div>
+            </li>
+        </a>
+        <hr>
+        <a href="#">
+            <li>Guide<div class="arrow"><img src="../static/icons/arrow.png" alt="" style="height: 16px;"></div>
+            </li>
+        </a>
+        <hr>
+        <a href="#">
+            <li>Facts<div class="arrow"><img src="../static/icons/arrow.png" alt="" style="height: 16px;"></div>
+            </li>
+        </a>
+        <hr>
+        <a href="#">
+            <li>Fitness<div class="arrow"><img src="../static/icons/arrow.png" alt="" style="height: 16px;"></div>
+            </li>
+        </a>
+        <hr>
+        <a href="#">
+            <li>About<div class="arrow"><img src="../static/icons/arrow.png" alt="" style="height: 16px;"></div>
+            </li>
+        </a>
+        <hr>
+        <a href="#">
+            <li>Contact<div class="arrow"><img src="../static/icons/arrow.png" alt="" style="height: 16px;"></div>
+            </li>
+        </a>
+        <div class="social">
+            <div class="title" style="text-align: center;    margin-top: 2em;">
+                Follow
+            </div>
+            <div class="logos">
+                <img src="../static/icons/facebook.png" alt="">
+                <img src="../static/icons/instragram.png" alt="">
+                <img src="../static/icons/gmail.png" alt="">
+
+            </div>
+
+        </div>
+
+
+
+    </ul>
+
+
+
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+<script>
+
+    $('document').ready(function () {
+        let a = document.getElementById('ham');
+        a.addEventListener('click', rotate)
+
+
+        function rotate() {
+
+
+            a.style.transform = 'rotate(-90deg)';
+
+            setTimeout(() => {
+                a.style.transform = 'rotate(0deg)';
+
+            }, 500);
+
+        }
+
+        $('#searchcross').click(function () {
+            // $('.searchbar').css({ 'z-index': '10', 'visibility': 'visible' })
+            $('.searchbar').css({
+                'z-index': '-50', 'visibility': 'hidden', 'opacity': '0', 'display': 'none'
+            })
+
+            // $('.searchbar').hide()
+
+        })
+        $('.search-image').click(function () {
+            $('.searchbar').css({ 'z-index': '1000', 'visibility': 'visible', 'opacity': '.99', 'display': 'flex' })
+            // $('.searchbar').show()
+
+        })
+
+        $('.navlinks a li').on('mouseover', function () {
+
+
+            $(this).children('.navlinks a li div ').css({
+
+                'visibility': 'visible',
+                'opacity': '1',
+                'transform': 'translateX(60px)',
+            })
+
+        }).on('mouseleave', function () {
+            $(this).children('.navlinks a li div ').css({
+
+                'transform': 'translateX(40px)',
+                'opacity': '0',
+                'visibility': 'hidden'
+            })
+        })
+
+        const navslide = () => {
+            const burger = document.querySelector('#ham')
+            const nav = document.querySelector('.navlinks')
+            const ham = document.querySelector('#hamcross')
+            burger.addEventListener('click', () => {
+                nav.classList.toggle('active')
+            })
+            ham.addEventListener('click', function () {
+                nav.classList.toggle('active')
+            })
+        }
+        navslide()
+
+
+
+    })
+    let button = document.querySelector('.input button')
+    button.addEventListener('click', function () {
+        let searched = document.querySelector('input')
+        searched.value = '';
+
+    })
+
+</script>
+
+</html>

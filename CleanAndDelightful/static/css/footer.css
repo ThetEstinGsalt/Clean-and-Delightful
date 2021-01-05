@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+
+.footerlogo img {
+    height: 4em;
+}
+
+* {
+    font-family: 'Cabin', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    box-sizing: border-box;
+
+} 
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: calc(auto+10px);
+
+    background: rgb(247 247 247);
+
+    height: 5em;
+
+
+
+
+}
+
+.footer .navigation-footer {
+    display: flex;
+    align-items: center;
+}
+
+.footer .navigation-footer ul {
+    display: flex;
+    transform: translateY(7.9px);
+
+
+
+}
+
+.footer .navigation-footer ul li {
+    padding: 0em 2em;
+
+    list-style: none;
+    font-weight: 600;
+    color: #000;
+
+
+
+}
+
+@media only screen and (max-width: 815px) {
+    .footer {
+
+        height: 10em;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+    .footerlogo img {
+        margin-bottom: 1em;
+
+    }
+
+    .footer .navigation-footer {
+        align-self: center;
+
+
+
+    }
+
+    .footer .navigation-footer ul {
+        flex-wrap: wrap;
+        justify-content: center;
+
+    }
+
+    .footer .navigation-footer ul li {
+        font-size: 10px;
+        padding: 0em 1em;
+
+    }
+
+}
