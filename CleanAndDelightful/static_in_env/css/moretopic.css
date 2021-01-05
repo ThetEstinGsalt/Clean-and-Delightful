@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@1,500&display=swap');
+
+.wrapper {
+    min-height: 15em;
+
+    display: flex;
+    overflow-x: auto;
+    /* justify-content: center; */
+
+    margin: auto 1em;
+    display: none;
+
+
+
+
+}
+
+.wrapper .item {
+    min-width: 15em;
+    height: 15rem;
+    line-height: 110px;
+    text-align: center;
+    background-color: #ddd;
+    /* margin: 12px 1em; */
+    margin: auto 1em;
+    display: flex;
+    flex-direction: column;
+
+    background: url('https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEzfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60') no-repeat center center/cover;
+
+}
+
+.wrapper::-webkit-scrollbar {
+    width: 0;
+}
+.items {
+  display: flex;
+  overflow-x: auto;
+  margin: auto;
+  align-items: center;
+  width: 79rem;
+  justify-content: center;
+
+
+
+}
+
+.items .moreon {
+  min-width: 23em;
+
+  height: 22rem;
+
+  margin: 0% 2.1%;
+  touch-action: manipulation;
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: Cabin, Helvetica, Arial, sans-serif;
+  color: whitesmoke;
+  transition: .35s all ease;
+
+
+
+
+}
+.items .moreon:hover{
+  filter: brightness(.849);
+
+}
+
+.items::-webkit-scrollbar {
+  /* color: black; */
+  display: none;
+
+
+}
+
+
+
+
+@media only screen and (max-width: 1244px) {
+  .items {
+    display: flex;
+    overflow-x: auto;
+    margin: auto;
+    align-items: center;
+    max-width: 69rem;
+    height: 30em;
+    justify-content: center;
+    width: 100%;
+
+
+
+  }
+
+
+
+}
+
+@media only screen and (max-width: 1244px) {
+  .items .moreon {
+    /* height: 17rem; */
+    touch-action: manipulation;
+    width: 100%;
+    /* min-width: 19em; */
+    margin: auto 8px;
+    max-width: 15em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: Cabin, Helvetica, Arial, sans-serif;
+    color: whitesmoke;
+    
+
+
+
+
+
+  }
+
+  @media only screen and (max-width: 1115px) {
+      #carouselExampleIndicators{
+          display: none;
+      }
+      .wrapper{
+          display: flex;
+      }
+   
+
+  }
+
+}
+
+.text {
+  font-family: Cabin, Helvetica, Arial, sans-serif;
+  font-size: 25px;
+  font-weight: 500;
+  font-style: normal;
+  padding: 20px 22px;
+  text-align: center;
+  width: 92%;
+  margin: auto;
+  /* margin: 0px 40px; */
+}
+
+.carousel-indicators {
+  bottom: 141px;
+}
+
+.items .moreon .text {
+  transform: translateY(50px);
+  visibility: hidden;
+  transition: .35s all ease;
+  opacity: 0;
+  color: #ffffff;
+  text-shadow: 3px 2px 4px black;
+}

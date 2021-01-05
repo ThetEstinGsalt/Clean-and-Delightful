@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,8 +8,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="../static/css/navigation.css">
-    <link rel="stylesheet" href="../static/css/moretopic.css">
+    <link rel="stylesheet" href="{% static 'css/navigation.css' %}">
+    <link rel="stylesheet" href="{% static 'css/moretopic.css' %}">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@700&display=swap');
 
@@ -1131,15 +1132,15 @@
         </div>
         <div class="litem">
             <div class="item"></div>
-            <div class="text">
+            <div class="text">  
                 Lorem ipsum dolor sit amet consectetur adi
             </div>
-
+ 
         </div>
 
 
     </div>
-    {{% include footer.html %}}
+    {% include "footer.html" %}
 
 
 

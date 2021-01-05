@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+* {
+    font-family: 'Cabin', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    box-sizing: border-box;
+
+}
+
+.blogs {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 4em 0em;
+
+}
+
+.blog {
+
+    /* border: 1px solid; */
+    width: 35em;
+    margin: 0em 1.3em;
+}
+
+.blog-thumbnail {
+    background: aquamarine;
+    height: 25.8em;
+}
+
+.blog-title {
+    font-family: Cabin, Helvetica, Arial, sans-serif;
+
+    font-weight: 600;
+    text-align: center;
+    font-style: normal;
+    font-size: 1.8rem;
+    letter-spacing: 0;
+    margin-top: 1.39rem;
+
+
+}
+
+.blog-concept {
+    text-align: center;
+    margin-top: .7em;
+    font-size: .9em;
+    font-family: "Crimson Text", Georgia, serif;
+    font-size: 18px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: .2px;
+    color: #777;
+    height: auto;
+
+
+}
+
+.blog-thumbnail {
+    background: url('https://images.unsplash.com/photo-1566478989037-eec170784d0b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')no-repeat center center/cover;
+    transition: .3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    /* text-shadow: 3px 2px 4px black; */
+}
+
+.blog-thumbnail:hover {
+    filter: brightness(.9);
+
+
+}
+
+.blog-thumbnail .view {
+    transform: translateY(50px);
+    opacity: 0;
+
+    visibility: hidden;
+    color: #fff;
+
+    font-size: 23px;
+
+    text-shadow: 3px 2px 4px black;
+    transition: .3s all ease;
+
+
+}
+
+@media only screen and (max-width: 950px) {
+    .blogs {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .blog-concept {
+        margin-bottom: 3em;
+    }
+}
+
+@media only screen and (max-width: 635px) {
+    .blog-thumbnail {
+        height: 70vw;
+        margin: 1em 1.5em;
+    }
+
+    .blog {
+        width: 35em;
+        margin: 0em 1.3em;
+        max-width: 100%;
+    }
+}
+
+.loadmore button {
+    font-family: Cabin, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background-color: #282828;
+    color: #EEEEEE;
+    padding: .5rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    transition: background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    cursor: pointer;
+    border-color: transparent;
+    text-decoration: none !important;
+
+}
+
+.loadmore button:hover {
+    background-color: #777;
+}
+
+.loadmore {
+    display: flex;
+    justify-content: center;
+    margin: 3em 0em;
+    margin-bottom: 5em;
+}
+
+.space {
+    margin: 4rem auto 0 auto;
+    border-bottom: 1px solid #eee;
+    border-top: 1px solid #eee;
+    max-width: 1160px;
+    width: 100%;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+
+    padding: 1.5rem 20px;
+    margin: 0 auto;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    max-width: 1160px;
+    width: 100%;
+
+
+    overflow: hidden;
+    /* padding: 20px 0; */
+
+}
+
+.title h1 {
+    margin-top: 5em;
+    margin-bottom: 1.2em;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 3.2em;
+}
+
+@media only screen and (max-width: 616px) {
+
+
+    .title h1 {
+        font-size: 1.5em;
+    }
+
+}
