@@ -122,6 +122,7 @@
             font-weight: 200;
             margin-bottom: 2em;
             text-align: center;
+            font-weight: 600;
 
 
         }
@@ -188,6 +189,7 @@
             font-family: 'Cabin', sans-serif;
             margin-top: .5em;
             margin-bottom: .25em;
+            font-weight: 900;
         }
 
         img {
@@ -267,12 +269,10 @@
 
         }
 
-
-
-
         @media only screen and (max-width:1078px) {
             .blog-content {
-                padding: 1em 2em;
+
+                padding: 1em 1.2em;
 
             }
 
@@ -381,7 +381,7 @@
 
         @media only screen and (max-width:456px) {
             .blog-content {
-                font-size: 18px;
+                font-size: 17px;
 
             }
         }
@@ -418,6 +418,7 @@
             .h5,
             .h6 {
                 font-size: 1.1em;
+
 
             }
 
@@ -530,6 +531,7 @@
             width: 320px;
             height: 80px;
             font-size: 17px;
+            font-weight: 600;
 
         }
 
@@ -568,8 +570,21 @@
 
             width: 60%;
             text-align: center;
+            font-weight: 900;
+
 
         }
+
+        .pagintext {
+            font-weight: 900;
+            transition: .7s all ease;
+
+        }
+
+        .pagintext:hover {
+            background-color: black;
+        }
+
 
         .pagination-text button span {
             width: 20em;
@@ -714,11 +729,15 @@
 
         </a>
         <div class="pagination-text">
-            How to be rich in ten days
+            <span class="pagintext">
+                How to be rich in ten days
+
+            </span>
+
             <br>
             <button
                 style="margin-top: 1em; padding: .4em 1em; width: 7em; height: 2em; overflow: hidden;   transition: .2s all ease;">
-                <span> View
+                <span style="font-weight: 600;"> View
                     blog</span>
                 <span><img src="../static/icons/arrow.png" style="height: 1em; transform:rotate(180deg);  "
                         alt=""></span></button>
@@ -735,11 +754,14 @@
 
         </a>
         <div class="pagination-text">
-            How to be rich in ten days and earn more than 30millions doller
+            <span class="pagintext">
+                How to be rich in ten days and earn more than 30millions doller
+
+            </span>
             <br>
             <button
                 style="margin-top: 1em; padding: .4em 1em; width: 7em; height: 2em; overflow: hidden;  transition: .2s all ease;">
-                <span> View
+                <span style="font-weight: 600;"> View
                     blog</span>
                 <span><img src="../static/icons/arrow.png" style="height: 1em; " alt=""></span></button>
 
@@ -929,7 +951,7 @@
             advertisement
         </div>
 
-        <div class="article-heading">
+        <div class="article-heading" style="color: rgb(53, 53, 53)">
             IF YOU LIKED OUR BLOG , ALSO CHECK THESE OUT
 
         </div>
@@ -1132,14 +1154,15 @@
         </div>
         <div class="litem">
             <div class="item"></div>
-            <div class="text">  
+            <div class="text">
                 Lorem ipsum dolor sit amet consectetur adi
             </div>
- 
+
         </div>
 
 
     </div>
+    <div style="width: 100%; height: 4em;"></div>
     {% include "footer.html" %}
 
 
