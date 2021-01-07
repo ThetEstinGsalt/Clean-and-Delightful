@@ -22,7 +22,7 @@
     <nav class="navcontainer-nav" id="jsnav">
         <div class="navcontainer">
             <div class="container-navigation">
-                <img onclick='rotate()' id="ham" src="../static/icons/ham.png" alt="">
+                <img id="ham" src="../static/icons/ham.png" alt="">
                 <div class="logo" ">
                     <img src=" ../static/icons/logo2.png"style=" height: 39px;" alt="">
                 </div>
@@ -58,7 +58,7 @@
                 <img src="../static/icons/cross.png" alt="">
 
             </div>
-            <form action="search.html" method="get">
+            <form action="/search" method="get">
                 <input type="text" placeholder="Enter keyword" spellcheck="false">
                 <button type="submit"> Search </button>
 
@@ -73,7 +73,7 @@
     <ul class="navlinks">
 
         <div class="navlinks-heading">
-            Clean and Delightful
+            <a id="navigations-title-above" href="/">Clean and Delightful</a>
 
 
             <img id="hamcross" src="../static/icons/cross.png" alt="">
@@ -441,11 +441,11 @@
         </div>
         <div class="navigation-footer">
             <ul>
-                <li>ABOUT</li>
-                <li>CONTACT</li>
-                <li>LIFESTYLE</li>
-                <li>FOODS</li>
-                <li>GUIDE</li>
+                <li> <a href="/about">ABOUT</a> </li>
+                <li> <a href="/contact">CONTACT</a> </li>
+                <li> <a href="/search">LIFESTYLE</a> </li>
+                <li> <a href="/search">FOODS</a> </li>
+                <li> <a href="/search">GUIDE</a> </li>
 
             </ul>
         </div>

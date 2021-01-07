@@ -18,6 +18,22 @@
 dl,ol,ul{
     margin-bottom: 0rem;
 }
+a{
+    text-decoration: none;
+    color: inherit;
+    transition: .2s all ease;
+}
+a:hover{
+    color: #a0a0a0;
+    text-decoration: none;
+}
+#navigations-title-above:hover{
+    color: black;
+
+}
+.title h1{
+    font-weight: 700;
+}
 .navcontainer {
     display: flex;
     width: 60%;
@@ -54,6 +70,10 @@ dl,ol,ul{
     margin-right: auto;
 
 
+}
+
+.container-navigation img{
+    cursor: pointer;
 }
 @media only screen and (max-width: 1251px) {
     .container-navigation {
@@ -286,12 +306,14 @@ input {
     height: 18px;
     transform: translate(10px, 0px);
     transition: all .2s ease;
+    cursor: pointer;
 
 }
 
 #ham {
     height: 25px;
     transition: all .2s ease;
+    cursor: pointer;
 }
 
 #ham:hover {
@@ -392,6 +414,7 @@ input {
 #hamcross:hover {
     opacity: .4;
     transition: all .2s ease;
+    cursor: pointer;
 }
 
 .searchbar {
@@ -419,6 +442,13 @@ input {
 
 
 }
+.searchbar img{
+    cursor: pointer;
+}
+.searchbar button{
+    cursor: pointer;
+}
+
 form{
     display: flex;
     flex-direction: column;
@@ -805,7 +835,8 @@ input:focus {
 }
 
 .box-1:hover {
-    opacity: .9;
+ 
+    opacity: .9189;
 
 
 }
@@ -1017,6 +1048,9 @@ input:focus {
 img {
     max-width: 100%;
     height: auto;
+}
+.footer img{
+    cursor: pointer;
 }
 
 .footer {
