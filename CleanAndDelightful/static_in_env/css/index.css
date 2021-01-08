@@ -638,8 +638,7 @@ input:focus {
 
 }
 
-.cards {
-
+.card a {
     width: 31%;
     height: 96%;
  
@@ -656,8 +655,32 @@ input:focus {
     border-radius: 4px;
 
     filter: brightness(1);
+  
 
 
+
+}
+.cards{
+    
+   
+ 
+    display: flex;
+    justify-content: center;
+    transition: .2s all ease;
+    height: 100%;
+
+
+
+    max-width: 100%;
+    width: 100%;
+ 
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+
+    filter: brightness(1);
+
+  
 }
 
 .cards .messege {
@@ -692,8 +715,8 @@ input:focus {
 
 
 @media only screen and (max-width:963px) {
-    .cards {
-        height: 87%;
+    .card a {
+        height: 45vw;
         display: flex;
         justify-content: center;
         transition: .2s all ease;
@@ -710,16 +733,22 @@ input:focus {
     }
 
     .card {
-        height: 80vh;
+        height: auto;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
         padding: 0em 2em;
         margin-top: 2em;
+        margin-bottom: 1em;
 
 
 
+    }
+}
+@media only screen and (max-width:531px){
+    .card a{
+        height: 65vw;
     }
 }
 
@@ -831,6 +860,7 @@ input:focus {
     background: url('https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center center/cover;
     /* linear-gradient(rgba(0, 0, 0, 0.23), rgba(0, 0, 0, 0.23)), */
     transition: .3s all ease;
+    margin: auto;
 
 }
 
@@ -893,6 +923,8 @@ input:focus {
     width: 59%;
     font-size: 22px;
     text-align: center;
+    margin:auto;
+    margin-top: 1em;
 }
 
 .view {
@@ -928,6 +960,10 @@ input:focus {
     font-size: 1.8rem;
     letter-spacing: 0;
     margin-top: 1.39rem;
+
+}
+.blog-anker:hover{
+    color: black;
 
 }
 
@@ -1126,7 +1162,7 @@ img {
     }
 
 }
-.subject{
+.cards .subject{
     font-size: 30px;
     align-self: flex-end;
     color: white;

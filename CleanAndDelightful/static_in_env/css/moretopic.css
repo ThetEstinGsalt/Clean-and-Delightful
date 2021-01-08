@@ -15,6 +15,19 @@
 
 
 }
+a{
+  text-decoration: none;
+  color: black;
+}
+a:hover{
+  text-decoration: none;
+  color: inherit;
+}
+.carousel-item{
+  height: auto;
+  -webkit-box-align:start;
+  align-items: flex-start;
+}
 
 .wrapper .item {
     min-width: 15em;
@@ -38,7 +51,7 @@
   display: flex;
   overflow-x: auto;
   margin: auto;
-  align-items: center;
+  align-items: baseline;
   width: 79rem;
   justify-content: center;
 
@@ -47,18 +60,16 @@
 }
 
 .items .moreon {
-  min-width: 23em;
+  width: 25.2em;
 
   height: 22rem;
 
-  margin: 0% 2.1%;
+  margin: 0% 0.5em!important;
   touch-action: manipulation;
   display: flex;
   flex-direction: column;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+
   font-family: Cabin, Helvetica, Arial, sans-serif;
   color: whitesmoke;
   transition: .35s all ease;
@@ -87,11 +98,12 @@
     display: flex;
     overflow-x: auto;
     margin: auto;
-    align-items: center;
+    align-items: baseline;
     max-width: 69rem;
     height: 30em;
-    justify-content: center;
+ 
     width: 100%;
+    overflow-x: hidden;
 
 
 
@@ -101,17 +113,17 @@
 
 }
 
-@media only screen and (max-width: 1244px) {
+@media only screen and (max-width: 1280px) {
   .items .moreon {
     /* height: 17rem; */
     touch-action: manipulation;
     width: 100%;
     /* min-width: 19em; */
     margin: auto 8px;
-    max-width: 15em;
+
+    max-width: 99%;
     display: flex;
-    align-items: center;
-    justify-content: center;
+   
     text-align: center;
     font-family: Cabin, Helvetica, Arial, sans-serif;
     color: whitesmoke;
