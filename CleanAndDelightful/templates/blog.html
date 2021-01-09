@@ -13,11 +13,17 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@700&display=swap');
 
+        * {
+            outline: lightskyblue;
+
+        }
+
         dl,
         ol,
         ul {
             margin-bottom: 0rem;
         }
+
 
         hr {
             display: none;
@@ -36,6 +42,7 @@
             height: auto;
 
         }
+
 
         .space {
             margin: 4rem auto 0 auto;
@@ -559,6 +566,7 @@
 
 
 
+
         }
 
         .pagination-text {
@@ -594,6 +602,11 @@
             transition: .2s all ease;
         }
 
+        button {
+            outline: none;
+            cursor: pointer;
+        }
+
         @media only screen and (max-width:1327px) {
             .pagination-blog {
                 display: none;
@@ -618,12 +631,12 @@
 
             <ul>
 
-                <li><a href=" #">Home</a></li>
-                <li><a href="#">Foods</a></li>
-                <li><a href="#">Lifestyle</a></li>
-                <li><a href="#">Guide</a></li>
-                <li><a href="#">Facts</a></li>
-                <li><a href="#">Fitness</a></li>
+                <li><a href=" /">Home</a></li>
+                <li><a href="/search">Foods</a></li>
+                <li><a href="/search">Lifestyle</a></li>
+                <li><a href="/search">Guide</a></li>
+                <li><a href="/search">Facts</a></li>
+                <li><a href="/search">Fitness</a></li>
 
 
             </ul>
@@ -658,48 +671,48 @@
     <ul class="navlinks">
 
         <div class="heading-text">
-            Clean and Delightful
+            <a href="/" style="color: black; text-decoration: none;">Clean and Delightful</a>
 
 
             <img id="hamcross" src="../static/icons/cross.png" alt="">
         </div>
 
-        <a href="">
+        <a href="/">
             <li>Home <div class="arrow"><img src="../static/icons/arrow.png" alt="" style="height: 16px;"></div>
             </li>
         </a>
 
-        <a href="#">
+        <a href="/search">
             <li>Foods<div class="arrow"><img src="../static/icons/arrow.png" alt="" style="height: 16px;"></div>
             </li>
         </a>
         <hr>
-        <a href="#">
+        <a href="/search">
             <li>Lifestyle<div class="arrow"><img src="../static/icons/arrow.png" alt="" style="height: 16px;"></div>
             </li>
         </a>
         <hr>
-        <a href="#">
+        <a href="/search">
             <li>Guide<div class="arrow"><img src="../static/icons/arrow.png" alt="" style="height: 16px;"></div>
             </li>
         </a>
         <hr>
-        <a href="#">
+        <a href="/search">
             <li>Facts<div class="arrow"><img src="../static/icons/arrow.png" alt="" style="height: 16px;"></div>
             </li>
         </a>
         <hr>
-        <a href="#">
+        <a href="/search">
             <li>Fitness<div class="arrow"><img src="../static/icons/arrow.png" alt="" style="height: 16px;"></div>
             </li>
         </a>
         <hr>
-        <a href="#">
+        <a href="/about">
             <li>About<div class="arrow"><img src="../static/icons/arrow.png" alt="" style="height: 16px;"></div>
             </li>
         </a>
         <hr>
-        <a href="#">
+        <a href="/about">
             <li>Contact<div class="arrow"><img src="../static/icons/arrow.png" alt="" style="height: 16px;"></div>
             </li>
         </a>
@@ -721,26 +734,29 @@
     </ul>
 
 
-    <div id="pagination-prev" class="pagination-blog">
-        <!-- <a href="/blog/100" class="pagination-title"> -->
+    <div id="pagination-prev" class="pagination-blog" onclick="window.location.href='/blog/10'">
+        <a href="/blog/100" class="pagination-title">
 
 
-        Previous blog
-        <!-- </a> -->
+            Previous blog
+        </a>
+
 
 
 
         <div class="pagination-text">
 
             <span class="pagintext">
+
                 How to be rich in ten days
+
 
             </span>
 
 
             <br>
             <button
-                style="margin-top: 1em; padding: .4em 1em; width: 7em; height: 2em; overflow: hidden;   transition: .2s all ease;">
+                style="margin-top: 1em; padding: .4em 1em; width: 7em; height: 2em; overflow: hidden;   transition: .2s all ease;   outline: lightskyblue; border-color:lightskyblue ;">
                 <span style="font-weight: 600;"> View
                     blog</span>
                 <span><img src="../static/icons/arrow.png" style="height: 1em; transform:rotate(180deg);  "
@@ -750,9 +766,10 @@
         </div>
 
 
+
     </div>
 
-    <div id="pagination-next" class="pagination-blog">
+    <div id="pagination-next" class="pagination-blog" onclick="window.location.href='/blog/100'">
         <a href="" class="pagination-title">
 
             Next blog
@@ -766,7 +783,7 @@
             </span>
             <br>
             <button
-                style="margin-top: 1em; padding: .4em 1em; width: 7em; height: 2em; overflow: hidden;  transition: .2s all ease;">
+                style="margin-top: 1em; padding: .4em 1em; width: 7em; height: 2em; overflow: hidden;  transition: .2s all ease; outline: lightskyblue; border-color:lightskyblue ;">
                 <span style="font-weight: 600;"> View
                     blog</span>
                 <span><img src="../static/icons/arrow.png" style="height: 1em; " alt=""></span></button>
@@ -934,18 +951,21 @@
             If you like this topic, you may like
         </div>
         <div class="affiliate">
-            <div class="classes">
+            <div class="classes" onclick="window.open('https:/www.amazon.com')">
                 <div class="products">
 
                 </div>
-                <span class="products-span">E.D.I.T.H glasses</span>
+                <span class="products-span"><a href="" style="color: lightskyblue; ">E.D.I.T.H
+                        glasses</a>
+                </span>
 
             </div>
-            <div class="classes">
+            <div class="classes" onclick="window.open('https:/www.amazon.com')">
                 <div class="products">
 
                 </div>
-                <span class="products-span">E.D.I.T.H glasses</span>
+                <span class="products-span"><a href="" style="color: lightskyblue;">E.D.I.T.H glasses</a>
+                </span>
 
             </div>
 
@@ -1271,12 +1291,12 @@
 
 
         })
-        let button = document.querySelector('.input button')
-        button.addEventListener('click', function () {
-            let searched = document.querySelector('input')
-            searched.value = '';
+        // let button = document.querySelector('.input button')
+        // button.addEventListener('click', function () {
+        //     let searched = document.querySelector('input')
+        //     searched.value = '';
 
-        })
+        // })
 
 
 
@@ -1363,6 +1383,7 @@
         }
 
         $('.pagination-blog').on('mouseover', function () {
+
             $(this).children('.pagination-title').css({
                 'background-color': 'black',
                 'opacity': '.56',
@@ -1374,6 +1395,7 @@
                 'visibility': 'visible'
             })
         }).on('mouseleave', function () {
+
             $(this).children('.pagination-title').css({
                 'background-color': 'white',
                 'opacity': '1',

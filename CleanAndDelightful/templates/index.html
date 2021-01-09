@@ -24,7 +24,8 @@
             <div class="container-navigation">
                 <img id="ham" src="../static/icons/ham.png" alt="">
                 <div class="logo" ">
-                    <img src=" ../static/icons/logo2.png"style=" height: 39px;" alt="">
+                    <img src=" ../static/icons/logo2.png"style=" height: 39px;" alt=""
+                    onclick="window.location.href='/'">
                 </div>
 
 
@@ -33,12 +34,12 @@
 
             <ul>
 
-                <li><a href=" #">Home</a></li>
-                <li><a href="#">Foods</a></li>
-                <li><a href="#">Lifestyle</a></li>
-                <li><a href="#">Guide</a></li>
-                <li><a href="#">Facts</a></li>
-                <li><a href="#">Fitness</a></li>
+                <li><a href=" /">Home</a></li>
+                <li><a href="/search">Foods</a></li>
+                <li><a href="/search">Lifestyle</a></li>
+                <li><a href="/search">Guide</a></li>
+                <li><a href="/search">Facts</a></li>
+                <li><a href="/search">Fitness</a></li>
 
 
             </ul>
@@ -58,8 +59,8 @@
                 <img src="../static/icons/cross.png" alt="">
 
             </div>
-            <form action="/search" method="get">
-                <input type="text" placeholder="Enter keyword" spellcheck="false">
+            <form action="/search" method="GET">
+                <input type="search" placeholder="Enter keyword" spellcheck="false" name='keyword'>
                 <button type="submit"> Search </button>
 
 
@@ -79,42 +80,42 @@
             <img id="hamcross" src="../static/icons/cross.png" alt="">
         </div>
 
-        <a href="#">
+        <a href="/">
             <li>Home <div class="arrow"><img src="../static/icons/arrow.png" alt="" style="height: 16px;"></div>
             </li>
         </a>
 
-        <a href="#">
+        <a href="/search">
             <li>Foods<div class="arrow"><img src="../static/icons/arrow.png" alt="" style="height: 16px;"></div>
             </li>
         </a>
         <hr>
-        <a href="#">
+        <a href="/search">
             <li>Lifestyle<div class="arrow"><img src="../static/icons/arrow.png" alt="" style="height: 16px;"></div>
             </li>
         </a>
         <hr>
-        <a href="#">
+        <a href="/search">
             <li>Guide<div class="arrow"><img src="../static/icons/arrow.png" alt="" style="height: 16px;"></div>
             </li>
         </a>
         <hr>
-        <a href="#">
+        <a href="/search">
             <li>Facts<div class="arrow"><img src="../static/icons/arrow.png" alt="" style="height: 16px;"></div>
             </li>
         </a>
         <hr>
-        <a href="#">
+        <a href="/search">
             <li>Fitness<div class="arrow"><img src="../static/icons/arrow.png" alt="" style="height: 16px;"></div>
             </li>
         </a>
         <hr>
-        <a href="#">
+        <a href="/about">
             <li>About<div class="arrow"><img src="../static/icons/arrow.png" alt="" style="height: 16px;"></div>
             </li>
         </a>
         <hr>
-        <a href="#">
+        <a href="/contact">
             <li>Contact<div class="arrow"><img src="../static/icons/arrow.png" alt="" style="height: 16px;"></div>
             </li>
         </a>
@@ -468,7 +469,9 @@
     </div>
     <div class="footer">
         <div class="footerlogo">
-            <img src="../static/icons/logo.png" alt="">
+            <a href="/">
+                <img src="../static/icons/logo.png" alt="">
+            </a>
 
         </div>
         <div class="navigation-footer">
@@ -617,12 +620,12 @@
 
 
         })
-        let button = document.querySelector('.input button')
-        button.addEventListener('click', function () {
-            let searched = document.querySelector('input')
-            searched.value = '';
+        // let button = document.querySelector('.input button')
+        // button.addEventListener('click', function () {
+        //     let searched = document.querySelector('input')
+        //     searched.value = '';
 
-        })
+        // })
 
 
 
