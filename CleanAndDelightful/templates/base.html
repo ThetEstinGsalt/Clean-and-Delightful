@@ -42,7 +42,14 @@
             height: 3.2em;
             width: 14em;
         }
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
         {% block plaincss %}
+
         {% endblock plaincss %}
     </style>
 </head>
@@ -54,8 +61,8 @@
         <div class="navcontainer">
             <div class="nav-container">
                 <img id="ham" src="../static/icons/ham.png" alt="">
-                <div class="logo" ">
-                    <img src=" ../static/icons/logo2.png"style=" height: 39px;" alt="">
+                <div class="logo" onclick="window.location.href='/'">
+                    <img src=" ../static/icons/logo2.png" style=" height: 39px;" alt="">
                 </div>
 
 
@@ -71,7 +78,7 @@
                 <li><a href="/search">Facts</a></li>
                 <li><a href="/search">Fitness</a></li>
 
-                   
+
 
             </ul>
             <div class="search-image">
@@ -105,7 +112,7 @@
     <ul class="navlinks">
 
         <div class="heading-text">
-              <a href="/" style="color: black; text-decoration: none;">Clean and Delightful</a>
+            <a href="/" style="color: black; text-decoration: none;">Clean and Delightful</a>
 
 
             <img id="hamcross" src="../static/icons/cross.png" alt="">
@@ -174,20 +181,20 @@
 
     <div class="footer">
         <div class="footerlogo">
-             <a href="/">
-             <img src="../static/icons/logo.png" alt="">
-        </a>
+            <a href="/">
+                <img src="../static/icons/logo.png" alt="">
+            </a>
 
         </div>
         <div class="navigation-footer">
             <ul>
-                 <li><a href="/about">ABOUT</a> </li>
+                <li><a href="/about">ABOUT</a> </li>
                 <li><a href="/contact">CONTACT</a> </li>
                 <li><a href="/search">LIFESTYLE</a> </li>
                 <li><a href="/search">FOODS</a> </li>
                 <li><a href="/search">GUIDE</a> </li>
 
-             
+
             </ul>
         </div>
     </div>

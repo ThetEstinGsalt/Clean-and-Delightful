@@ -290,6 +290,12 @@
 
         }
 
+        @media only screen and (max-width:737px) {
+            .blog-content {
+                font-size: 20px;
+            }
+        }
+
         @media only screen and (max-width:695px) {
             .article-heading {
                 padding: 0em;
@@ -586,6 +592,7 @@
         .pagintext {
             font-weight: 900;
             transition: .7s all ease;
+            cursor: pointer;
 
         }
 
@@ -621,8 +628,8 @@
         <div class="navcontainer">
             <div class="nav-container">
                 <img id="ham" src="../static/icons/ham.png" alt="">
-                <div class="logo" ">
-                    <img src=" ../static/icons/logo2.png"style=" height: 39px;" alt="">
+                <div class="logo" onclick="window.location.href='/'">
+                    <img src=" ../static/icons/logo2.png" style=" height: 39px;" alt="">
                 </div>
 
 
@@ -948,7 +955,7 @@
         </div>
 
         <div class="article-heading">
-            If you like this topic, you may like
+            If you like this topic, you may also like
         </div>
         <div class="affiliate">
             <div class="classes" onclick="window.open('https:/www.amazon.com')">

@@ -1,4 +1,5 @@
 from django.shortcuts import render, HttpResponse
+from .models import Contact
 
 
 def home(request):
@@ -10,6 +11,15 @@ def about(request):
 
 
 def contact(request):
+    if request.method == 'POST':
+        name = request.POST['name']
+        email = request.POST['email']
+        subject = request.POST['subject']
+        messege = request.POST['messege']
+        contact = Contact(name=name, email=email,
+                          subject=subject, messege=messege)
+        contact.save()
+
     return render(request, 'contact.html')
 
 
