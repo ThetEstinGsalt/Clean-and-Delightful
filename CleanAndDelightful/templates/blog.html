@@ -98,7 +98,7 @@
         }
 
         .blog-heading {
-            font-size: 3em;
+            font-size: 3.5em;
             font-weight: 700;
             color: #000;
             text-align: center;
@@ -274,6 +274,10 @@
                 width: 41vw;
             }
 
+            .blog-heading {
+                font-size: 3em
+            }
+
         }
 
         @media only screen and (max-width:1078px) {
@@ -304,6 +308,9 @@
 
         @media only screen and (max-width:582px) {
 
+            .blog-content {
+                font-size: 18px;
+            }
 
             .blog-heading {
                 font-size: 1.7em;
@@ -316,7 +323,7 @@
             }
 
             .concept {
-                padding: 1em 2em;
+                padding: 1em 1.5em;
                 font-size: 18px;
             }
 
@@ -402,7 +409,7 @@
         @media only screen and (max-width:354px) {
             .blog-content {
                 padding: 4em 0em;
-                font-size: 13px;
+                font-size: 13.2px;
 
             }
 
@@ -512,6 +519,14 @@
 
         }
 
+        .anker {
+            color: lightskyblue;
+            text-decoration: underline;
+        }
+
+        .anker:hover {
+            color: blue;
+        }
 
 
         #pagination-next .pagination-title {
@@ -813,26 +828,18 @@
     <!-- ----------------------------------------------------- -->
     <div class="site-content">
         <div class="blog-heading">
-            All The Trimmings: The Best Sunday Lunches Across The UK
+            {{blog.title}}
 
 
         </div>
 
-        <img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-            alt="" id="thumbnail">
+        <img src="{{blog.thumbnail}}" alt="" id="thumbnail">
         <div class=" space">
             advertisement
         </div>
         <div class="concept">
 
-            It’s Sunday lunch weather. Granted, a Sunday Lunch is always a good idea but a colder, greyer climate makes
-            a wholesome, all-the-trimmings roast feel like even more of a treat.
-            <br>
-            <br>
-
-            We love a good Sunday roast here at Ape and it’s fair to say that some places do it better than others. God
-            bless Toby Carvery and everyone’s mum, but if you want something truly special to see out the weekend and
-            fill your belly, you’ll want to try our pick of the best roasts in the UK.
+            {{blog.concept}}
 
 
         </div>
@@ -841,30 +848,13 @@
         </div>
         <div class="article">
             <div class="article-heading">
-                Start learning programming from now and start freelancing and tutioning
+                {{blog.article_title}}
             </div>
-            <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1309&q=80"
-                alt="" height="700px" width="1000px">
+            <img src="{{blog.image}}" alt="" height="700px" width="1000px">
 
             <div class="blog-content">
-                <h2>heading</h2>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione molestias, amet, repudiandae excepturi
-                eum omnis nisi ipsam nam earum expedita dolore sequi at modi alias consequatur quasi a cum ipsum.lorem
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas odio repellendus, tempore eos
-                <br>
-                <h2>make migrations</h2>
-                It’s Sunday lunch weather. Granted, a Sunday Lunch is always a good idea but a colder, greyer climate
-                makes
-                a wholesome, all-the-trimmings roast feel like even more of a treat.
-                moll
-                <br>
-                <br>
+                {{blog.article_content|safe}}
 
-                itia voluptatibus corrupti.
-                lorem Lorem ipsum d
-                <h2>python</h2>olor sit amet consectetur adipisicing elit. Error labore consequuntur, ullam adipisci
-                sapiente odit numquam iusto commodi eos. Quod ipsum aliquid vero illum eius beatae accusantium similique
-                sapiente alias!
             </div>
 
 
@@ -881,30 +871,13 @@
 
         <div class="article">
             <div class="article-heading">
-                Start learning programming from now and start freelancing
+                {{blog.article_title1}}
             </div>
-            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1352&q=80"
-                alt="" height="700px" width="1000px">
+            <img src="{{blog.image1}}" alt="" height="700px" width="1000px">
 
             <div class="blog-content">
-                <h2>heading</h2>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione molestias, amet, repudiandae excepturi
-                eum omnis nisi ipsam nam earum expedita dolore sequi at modi alias consequatur quasi a cum ipsum.lorem
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas odio repellendus, tempore eos
-                <br>
-                <h2>make migrations</h2>
-                It’s Sunday lunch weather. Granted, a Sunday Lunch is always a good idea but a colder, greyer climate
-                makes
-                a wholesome, all-the-trimmings roast feel like even more of a treat.
-                moll
-                <br>
-                <br>
+                {{blog.article_content1|safe}}
 
-                itia voluptatibus corrupti.
-                lorem Lorem ipsum d
-                <h2>python</h2>olor sit amet consectetur adipisicing elit. Error labore consequuntur, ullam adipisci
-                sapiente odit numquam iusto commodi eos. Quod ipsum aliquid vero illum eius beatae accusantium similique
-                sapiente alias!
             </div>
 
 
@@ -918,33 +891,13 @@
 
         <div class="article">
             <div class="article-heading">
-                Start learning programming from now and start freelancing
+                {{blog.article_title2}}
             </div>
-            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1352&q=80"
-                alt="" height="700px" width="1000px">
+            <img src="{{blog.image2}}" alt="" height="700px" width="1000px">
 
             <div class="blog-content">
-                <h2>heading</h2>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione molestias, amet, repudiandae excepturi
-                eum omnis nisi ipsam nam earum expedita dolore sequi at modi alias consequatur quasi a cum ipsum.lorem
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas odio repellendus, tempore eos
-                <br>
-                <h2>make migrations</h2>
-                It’s Sunday lunch weather. Granted, a Sunday Lunch is always a good idea but a colder, greyer climate
-                makes
-                a wholesome, all-the-trimmings roast feel like even more of a treat.
-                moll
-                <br>
-                <br>
+                {{blog.article_content2|safe}}
 
-                itia voluptatibus corrupti.
-                lorem Lorem ipsum d
-                <h2>python</h2>olor sit amet consectetur adipisicing elit. Error labore consequuntur, ullam adipisci
-                sapiente odit numquam iusto commodi eos. Quod ipsum aliquid vero illum eius beatae accusantium similique
-                sapiente alias!
-                <div class="quotes">
-                    ""dont count the days,let the days be count"""
-                </div>
             </div>
 
 
@@ -953,6 +906,255 @@
         <div class="space">
             advertisement
         </div>
+
+
+        <div class="article">
+            <div class="article-heading">
+                {{blog.article_title3}}
+            </div>
+            <img src="{{blog.image3}}" alt="" height="700px" width="1000px">
+
+            <div class="blog-content">
+                {{blog.article_content3|safe}}
+
+            </div>
+
+
+
+        </div>
+        <div class="space">
+            advertisement
+        </div>
+
+
+        <div class="article">
+            <div class="article-heading">
+                {{blog.article_title4}}
+            </div>
+            <img src="{{blog.image4}}" alt="" height="700px" width="1000px">
+
+            <div class="blog-content">
+                {{blog.article_content4|safe}}
+
+            </div>
+
+
+
+        </div>
+        <div class="space">
+            advertisement
+        </div>
+
+
+
+        <div class="article">
+            <div class="article-heading">
+                {{blog.article_title5}}
+            </div>
+            <img src="{{blog.image5}}" alt="" height="700px" width="1000px">
+
+            <div class="blog-content">
+                {{blog.article_content5|safe}}
+
+            </div>
+
+
+
+        </div>
+        <div class="space">
+            advertisement
+        </div>
+
+        <div class="article">
+            <div class="article-heading">
+                {{blog.article_title6}}
+            </div>
+            <img src="{{blog.image6}}" alt="" height="700px" width="1000px">
+
+            <div class="blog-content">
+                {{blog.article_content6|safe}}
+
+            </div>
+
+
+
+        </div>
+        <div class="space">
+            advertisement
+        </div>
+
+
+        <div class="article">
+            <div class="article-heading">
+                {{blog.article_title7}}
+            </div>
+            <img src="{{blog.image7}}" alt="" height="700px" width="1000px">
+
+            <div class="blog-content">
+                {{blog.article_content7|safe}}
+
+            </div>
+
+
+
+        </div>
+        <div class="space">
+            advertisement
+        </div>
+
+
+
+        <div class="article">
+            <div class="article-heading">
+                {{blog.article_title8}}
+            </div>
+            <img src="{{blog.image8}}" alt="" height="700px" width="1000px">
+
+            <div class="blog-content">
+                {{blog.article_content8|safe}}
+
+            </div>
+
+
+
+        </div>
+        <div class="space">
+            advertisement
+        </div>
+
+
+
+        <div class="article">
+            <div class="article-heading">
+                {{blog.article_title9}}
+            </div>
+            <img src="{{blog.image9}}" alt="" height="700px" width="1000px">
+
+            <div class="blog-content">
+                {{blog.article_content9|safe}}
+
+            </div>
+
+
+
+        </div>
+        <div class="space">
+            advertisement
+        </div>
+
+
+        <div class="article">
+            <div class="article-heading">
+                {{blog.article_title10}}
+            </div>
+            <img src="{{blog.image10}}" alt="" height="700px" width="1000px">
+
+            <div class="blog-content">
+                {{blog.article_content10|safe}}
+
+            </div>
+
+
+
+        </div>
+        <div class="space">
+            advertisement
+        </div>
+
+        <div class="article">
+            <div class="article-heading">
+                {{blog.article_title11}}
+            </div>
+            <img src="{{blog.image11}}" alt="" height="700px" width="1000px">
+
+            <div class="blog-content">
+                {{blog.article_content11|safe}}
+
+            </div>
+
+
+
+        </div>
+        <div class="space">
+            advertisement
+        </div>
+
+
+        <div class="article">
+            <div class="article-heading">
+                {{blog.article_title12}}
+            </div>
+            <img src="{{blog.image12}}" alt="" height="700px" width="1000px">
+
+            <div class="blog-content">
+                {{blog.article_content12|safe}}
+
+            </div>
+
+
+
+        </div>
+        <div class="space">
+            advertisement
+        </div>
+
+
+        <div class="article">
+            <div class="article-heading">
+                {{blog.article_title13}}
+            </div>
+            <img src="{{blog.image13}}" alt="" height="700px" width="1000px">
+
+            <div class="blog-content">
+                {{blog.article_content13|safe}}
+
+            </div>
+
+
+
+        </div>
+        <div class="space">
+            advertisement
+        </div>
+
+        <div class="article">
+            <div class="article-heading">
+                {{blog.article_title14}}
+            </div>
+            <img src="{{blog.image14}}" alt="" height="700px" width="1000px">
+
+            <div class="blog-content">
+                {{blog.article_content14|safe}}
+
+            </div>
+
+
+
+        </div>
+        <div class="space">
+            advertisement
+        </div>
+
+        <div class="article">
+            <div class="article-heading">
+                {{blog.article_title15}}
+            </div>
+            <img src="{{blog.image15}}" alt="" height="700px" width="1000px">
+
+            <div class="blog-content">
+
+                {{blog.article_content15|safe}}
+
+            </div>
+
+
+
+        </div>
+        <div class="space">
+            advertisement
+        </div>
+
+
 
         <div class="article-heading">
             If you like this topic, you may also like
@@ -1231,6 +1433,23 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
     <script>
+        var a = document.querySelectorAll('.article')
+        var add = document.querySelectorAll('.space')
+        // var adds = Array.from(add)
+        // Array.from(a).forEach(function (e) {
+
+        //     e.style.background = 'blue'
+        // }
+
+        // );
+        for (let i = 0; i < a.length; i++) {
+            if (a[i].innerText == "") {
+                a[i].style.display = "none"
+                add[i + 1].style.display = "none"
+            }
+        }
+
+
         $('document').ready(function () {
             let a = document.getElementById('ham');
             a.addEventListener('click', rotate)
