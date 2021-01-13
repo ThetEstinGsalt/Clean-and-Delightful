@@ -234,7 +234,7 @@
 
         .products-span {
             display: block;
-            background: antiquewhite;
+            background: white;
             margin-top: em;
             height: 0em;
             margin-top: 1.5em;
@@ -252,7 +252,7 @@
             height: 100%;
             width: 28em;
             margin: 0px 2%;
-            background: url('https://images.unsplash.com/photo-1556306510-31ca015374b0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center center/cover;
+      
             transition: .3s all ease;
 
         }
@@ -302,9 +302,13 @@
 
         @media only screen and (max-width:695px) {
             .article-heading {
-                padding: 0em;
+                padding: 0em 1em;
             }
         }
+        #lastspace{
+            height: 4em;
+        }
+
 
         @media only screen and (max-width:582px) {
 
@@ -345,7 +349,10 @@
                 font-size: 1.3em;
 
 
-            }
+           }
+           #lastspace{
+                height: 2em;
+           }
 
 
 
@@ -354,27 +361,20 @@
         @media only screen and (max-width:462px) {
 
             .article-heading {
-
-
-
-
-
                 font-size: 1.3em;
-                padding: 1em;
-
-
+                padding: 0em 2em;
             }
-
-
-
             .affiliate {
                 height: 11.5em;
-                width: auto;
                 display: flex;
                 flex-direction: row;
                 justify-content: center;
                 margin-bottom: 5em;
             }
+            .products {
+                width: 37vw;
+            }
+
 
             h1,
             h2,
@@ -391,10 +391,11 @@
 
 
             }
-
             .products {
-                width: 32vw;
+                width: 38vw;
             }
+
+           
 
 
         }
@@ -459,26 +460,19 @@
             .site-content {
                 overflow-x: hidden;
             }
-
-
-
-
-
+            
+            .products {
+                width: 37vw;
+            }
 
         }
-
+    
         @media only screen and (max-width:285px) {
             .products-span {
                 transform: translateX(18px);
 
             }
         }
-
-
-
-
-
-
 
 
 
@@ -564,7 +558,7 @@
         }
 
         .pagination-blog {
-            background: url('https://images.unsplash.com/photo-1515238152791-8216bfdf89a7?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1352&q=80') center center/cover;
+          
             height: 320px;
             position: fixed;
             width: auto;
@@ -653,12 +647,14 @@
 
             <ul>
 
-                <li><a href=" /">Home</a></li>
-                <li><a href="/search">Foods</a></li>
-                <li><a href="/search">Lifestyle</a></li>
-                <li><a href="/search">Guide</a></li>
-                <li><a href="/search">Facts</a></li>
-                <li><a href="/search">Fitness</a></li>
+           
+
+                <li><a href="/">Home</a></li>
+                <li><a href="/search/foods">Foods</a></li>
+                <li><a href="/search/lifestyle">Lifestyle</a></li>
+                <li><a href="/search/guide">Guide</a></li>
+                <li><a href="/search/facts">Facts</a></li>
+                <li><a href="/search/fitness">Fitness</a></li>
 
 
             </ul>
@@ -696,7 +692,7 @@
             <a href="/" style="color: black; text-decoration: none;">Clean and Delightful</a>
 
 
-            <img id="hamcross" src="../static/icons/cross.png" alt="">
+            <img id="hamcross" src="../static/icons/cross.png" alt="" style="margin-top:6.5px;">
         </div>
 
         <a href="/">
@@ -704,27 +700,27 @@
             </li>
         </a>
 
-        <a href="/search">
+        <a href="/search/foods">
             <li>Foods<div class="arrow"><img src="../static/icons/arrow.png" alt="" style="height: 16px;"></div>
             </li>
         </a>
         <hr>
-        <a href="/search">
+        <a href="/search/lifestyle">
             <li>Lifestyle<div class="arrow"><img src="../static/icons/arrow.png" alt="" style="height: 16px;"></div>
             </li>
         </a>
         <hr>
-        <a href="/search">
+        <a href="/search/guide">
             <li>Guide<div class="arrow"><img src="../static/icons/arrow.png" alt="" style="height: 16px;"></div>
             </li>
         </a>
         <hr>
-        <a href="/search">
+        <a href="/search/facts">
             <li>Facts<div class="arrow"><img src="../static/icons/arrow.png" alt="" style="height: 16px;"></div>
             </li>
         </a>
         <hr>
-        <a href="/search">
+        <a href="/search/fitness">
             <li>Fitness<div class="arrow"><img src="../static/icons/arrow.png" alt="" style="height: 16px;"></div>
             </li>
         </a>
@@ -756,8 +752,8 @@
     </ul>
 
 
-    <div id="pagination-prev" class="pagination-blog" onclick="window.location.href='/blog/10'">
-        <a href="/blog/100" class="pagination-title">
+    <div id="pagination-prev" class="pagination-blog" onclick="window.location.href='/blog/{{prev}}'" style="background: url('{{prev1}}') center center/cover;">
+        <a href="/blog/{{prev}}" class="pagination-title">
 
 
             Previous blog
@@ -770,7 +766,7 @@
 
             <span class="pagintext">
 
-                How to be rich in ten days
+                {{prev0}}
 
 
             </span>
@@ -791,8 +787,8 @@
 
     </div>
 
-    <div id="pagination-next" class="pagination-blog" onclick="window.location.href='/blog/100'">
-        <a href="" class="pagination-title">
+    <div id="pagination-next" class="pagination-blog" onclick="window.location.href='/blog/{{next}}'" style="background: url('{{next1}}') center center/cover;">
+        <a href="/blog/{{next}}" class="pagination-title" >
 
             Next blog
 
@@ -800,7 +796,7 @@
         </a>
         <div class="pagination-text">
             <span class="pagintext">
-                How to be rich in ten days and earn more than 30millions doller
+                {{next0}}
 
             </span>
             <br>
@@ -1160,20 +1156,19 @@
             If you like this topic, you may also like
         </div>
         <div class="affiliate">
-            <div class="classes" onclick="window.open('https:/www.amazon.com')">
-                <div class="products">
+            <div class="classes" onclick="window.open('{{affiliate.link}}')">
+                <div class="products" style="background: url('{{affiliate.image}}') center center/cover;">
 
                 </div>
-                <span class="products-span"><a href="" style="color: lightskyblue; ">E.D.I.T.H
-                        glasses</a>
+                <span class="products-span"><a href="{{affiliate.link}}" style="color: black; ">{{affiliate.name}}</a>
                 </span>
 
             </div>
-            <div class="classes" onclick="window.open('https:/www.amazon.com')">
-                <div class="products">
+            <div class="classes" onclick="window.open('{{affiliate.link2}}')">
+                <div class="products" style="background: url('{{affiliate.image2}}') center center/cover;">
 
                 </div>
-                <span class="products-span"><a href="" style="color: lightskyblue;">E.D.I.T.H glasses</a>
+                <span class="products-span"><a href="{{affiliate.link2}}" style="color: black;">{{affiliate.name2}}</a>
                 </span>
 
             </div>
@@ -1201,7 +1196,7 @@
 
     </div>
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
+        <ol class="carousel-indicators" style="bottom: 154px;">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
@@ -1209,50 +1204,27 @@
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <div class="items">
+                    
+                    {%for recomend in recomendation|slice:"0:3"%}
                     <div class="on">
-                        <a href="/blog/1">
+                        <a href="/blog/{{recomend.auto_increment_id}}">
                             <div class="moreon"
-                                style=" background: url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80') center center/cover;">
+                                style=" background: url('{{recomend.thumbnail}}') center center/cover;">
                                 <div class="text">
                                     View post &rarr;
                                 </div>
 
                             </div>
                             <div class="text">
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                {{recomend.title}}
                             </div>
                         </a>
 
                     </div>
+                    {% endfor %}
 
 
-                    <div class="on">
-                        <a href="/blog/1">
-                            <div class="moreon"
-                                style=" background: url('https://images.unsplash.com/photo-1568909344668-6f14a07b56a0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80') center center/cover;">
-                                <div class="text">
-                                    View post &rarr;
-                                </div>
-                            </div>
-                            <div class="text">
-                                Lorem ipsum dolor sit amet consectetur adi
-                            </div>
-                        </a>
-
-                    </div>
-                    <div class="on">
-                        <a href="/blog/1">
-                            <div class="moreon"
-                                style=" background: url('https://images.unsplash.com/photo-1573246123716-6b1782bfc499?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1260&q=80') center center/cover;">
-                                <div class="text">
-                                    View post &rarr;
-                                </div>
-                            </div>
-                            <div class="text">
-                                Top Ten Burgers In The World To Eat
-                            </div>
-                        </a>
-                    </div>
+                  
 
 
                 </div>
@@ -1261,49 +1233,26 @@
             </div>
             <div class="carousel-item">
                 <div class="items">
+                    {%for recomend in recomendation|slice:"3:6"%}
                     <div class="on">
-                        <a href="/blog/1">
+                        <a href="/blog/{{recomend.auto_increment_id}}">
                             <div class="moreon"
-                                style=" background: url('https://images.unsplash.com/photo-1425934398893-310a009a77f9?ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDV8fHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60') center center/cover;">
+                                style=" background: url('{{recomend.thumbnail}}') center center/cover;">
                                 <div class="text">
                                     View post &rarr;
                                 </div>
+
                             </div>
                             <div class="text">
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                {{recomend.title}}
                             </div>
                         </a>
 
                     </div>
+                    {% endfor %}
+    
 
 
-                    <div class="on">
-                        <a href="/blog/1">
-                            <div class="moreon"
-                                style=" background: url('https://images.unsplash.com/photo-1547584370-2cc98b8b8dc8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80') center center/cover;">
-                                <div class="text">
-                                    View post &rarr;
-                                </div>
-                            </div>
-                            <div class="text">
-                                Lorem ipsum dolor sit amet consectetur adi
-                            </div>
-                        </a>
-
-                    </div>
-                    <div class="on">
-                        <a href="/blog/1">
-                            <div class="moreon"
-                                style=" background: url('https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80') center center/cover;">
-                                <div class="text">
-                                    View post &rarr;
-                                </div>
-                            </div>
-                            <div class="text">
-                                Top Ten Burgers In The World To Eat
-                            </div>
-                        </a>
-                    </div>
 
 
                 </div>
@@ -1312,49 +1261,25 @@
             </div>
             <div class="carousel-item">
                 <div class="items">
+                    {%for recomend in recomendation|slice:"6:9"%}
                     <div class="on">
-                        <a href="/blog/1">
+                        <a href="/blog/{{recomend.auto_increment_id}}">
                             <div class="moreon"
-                                style=" background: url('https://images.unsplash.com/photo-1597404294360-feeeda04612e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center center/cover;">
+                                style=" background: url('{{recomend.thumbnail}}') center center/cover;">
                                 <div class="text">
                                     View post &rarr;
                                 </div>
+
                             </div>
                             <div class="text">
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                {{recomend.title}}
                             </div>
                         </a>
 
                     </div>
-
-
-                    <div class="on">
-                        <a href="/blog/1">
-                            <div class="moreon"
-                                style=" background: url('https://images.unsplash.com/photo-1519046904884-53103b34b206?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center center/cover;">
-                                <div class="text">
-                                    View post &rarr;
-                                </div>
-                            </div>
-                            <div class="text">
-                                Lorem ipsum dolor sit amet consectetur adi
-                            </div>
-                        </a>
-
-                    </div>
-                    <div class="on">
-                        <a href="/blog/1">
-                            <div class="moreon"
-                                style=" background: url('https://images.unsplash.com/photo-1475924156734-496f6cac6ec1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center center/cover;">
-                                <div class="text">
-                                    View post &rarr;
-                                </div>
-                            </div>
-                            <div class="text">
-                                Top Ten Burgers In The World To Eat
-                            </div>
-                        </a>
-                    </div>
+                    {% endfor %}
+    
+                   
 
 
                 </div>
@@ -1365,57 +1290,21 @@
         </div>
     </div>
     <div class="wrapper">
-        <div class="litem">
-            <div class="item"></div>
-            <div class="text">
-                Lorem ipsum dolor sit amet consectetur adi
+        {%for recomend in recomendation%}
+        <div class="litem"onclick="window.location.href='/blog/{{recomend.auto_increment_id}}'">
+            <div class="item" style="background: url('{{recomend.thumbnail}}') no-repeat center center/cover;"></div>
+            <div class="text" style="font-size: 20px;">
+                {{recomend.title}}
+               
 
             </div>
 
         </div>
-        <div class="litem">
-            <div class="item"></div>
-            <div class="text">
-                Lorem ipsum dolor sit amet consectetur adi
-
-            </div>
-
-        </div>
-        <div class="litem">
-            <div class="item"></div>
-            <div class="text">
-                Lorem ipsum dolor sit amet consectetur adi
-
-            </div>
-
-        </div>
-        <div class="litem">
-            <div class="item"></div>
-            <div class="text">
-                Lorem ipsum dolor sit amet consectetur adi
-
-            </div>
-
-        </div>
-        <div class="litem">
-            <div class="item"></div>
-            <div class="text">
-                Lorem ipsum dolor sit amet consectetur adi
-
-            </div>
-
-        </div>
-        <div class="litem">
-            <div class="item"></div>
-            <div class="text">
-                Lorem ipsum dolor sit amet consectetur adi
-            </div>
-
-        </div>
-
+        {% endfor %}
+     
 
     </div>
-    <div style="width: 100%; height: 4em;"></div>
+    <div id="lastspace"style="width: 100%; "></div>
     {% include "footer.html" %}
 
 
@@ -1612,7 +1501,7 @@
 
             $(this).children('.pagination-title').css({
                 'background-color': 'black',
-                'opacity': '.56',
+                'opacity': '.4',
                 'color': 'white'
             })
 

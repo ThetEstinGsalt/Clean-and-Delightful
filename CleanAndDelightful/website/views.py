@@ -23,5 +23,6 @@ def contact(request):
     return render(request, 'contact.html')
 
 
-def search(request):
+def search(request, cat):
+    print(cat)
     return render(request, 'search.html')
