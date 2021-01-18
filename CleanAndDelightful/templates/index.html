@@ -11,6 +11,38 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="../static/css/index.css">
+    <style>
+        .blogs {
+            display: none;
+        }
+
+        .space {
+            display: none;
+        }
+
+        #loadmore {
+            border: none;
+            outline: none;
+        }
+
+        @media only screen and (max-width: 670px) {
+            .blog-concept {
+                padding: 0em 3em;
+                font-size: .9em;
+            }
+
+            .blog-title {
+                font-size: 1.64rem;
+            }
+        }
+
+        @media only screen and (max-width: 356px) {
+            .blog-title {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+
 
 
 
@@ -34,14 +66,14 @@
 
             <ul>
 
-         
+
 
                 <li><a href="/">Home</a></li>
-                <li><a href="/search/foods">Foods</a></li>
-                <li><a href="/search/lifestyle">Lifestyle</a></li>
-                <li><a href="/search/guide">Guide</a></li>
-                <li><a href="/search/facts">Facts</a></li>
-                <li><a href="/search/fitness">Fitness</a></li>
+                <li><a href="/search/2">Foods</a></li>
+                <li><a href="/search/1">Lifestyle</a></li>
+                <li><a href="/search/3">Guide</a></li>
+                <li><a href="/search/4">Facts</a></li>
+                <li><a href="/search/5">Fitness</a></li>
 
 
             </ul>
@@ -61,7 +93,7 @@
                 <img src="../static/icons/cross.png" alt="">
 
             </div>
-            <form action="/search" method="GET">
+            <form action="/search/keyword" method="GET">
                 <input type="search" placeholder="Enter keyword" spellcheck="false" name='keyword'>
                 <button type="submit"> Search </button>
 
@@ -87,27 +119,27 @@
             </li>
         </a>
 
-        <a href="/search/foods">
+        <a href="/search/2">
             <li>Foods<div class="arrow"><img src="../static/icons/arrow.png" alt="" style="height: 16px;"></div>
             </li>
         </a>
         <hr>
-        <a href="/search/lifestyle">
+        <a href="/search/1">
             <li>Lifestyle<div class="arrow"><img src="../static/icons/arrow.png" alt="" style="height: 16px;"></div>
             </li>
         </a>
         <hr>
-        <a href="/search/guide">
+        <a href="/search/3">
             <li>Guide<div class="arrow"><img src="../static/icons/arrow.png" alt="" style="height: 16px;"></div>
             </li>
         </a>
         <hr>
-        <a href="/search/facts">
+        <a href="/search/4">
             <li>Facts<div class="arrow"><img src="../static/icons/arrow.png" alt="" style="height: 16px;"></div>
             </li>
         </a>
         <hr>
-        <a href="/search/fitness">
+        <a href="/search/5">
             <li>Fitness<div class="arrow"><img src="../static/icons/arrow.png" alt="" style="height: 16px;"></div>
             </li>
         </a>
@@ -126,9 +158,11 @@
                 Follow
             </div>
             <div class="logos">
-                <img src="../static/icons/facebook.png" alt="">
-                <img src="../static/icons/instragram.png" alt="">
-                <img src="../static/icons/gmail.png" alt="">
+                <img target="_blank" src="../static/icons/facebook.png" alt=""
+                    onclick="window.open('{{social.facebook}}')">
+                <img target="_blank" src="../static/icons/instragram.png" alt=""
+                    onclick="window.open('{{social.insta}}')">
+                <img target="_blank" src="../static/icons/gmail.png" alt="" onclick="window.open('{{social.mail}}')">
 
             </div>
 
@@ -151,7 +185,7 @@
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active"
-                    style="background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center center/cover;">
+                    style="background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('{{image.foods_top}}') center center/cover;">
                     <div class="headingText">
                         <span class="headingspan">
                             Welcome to Clean and Delightful
@@ -162,14 +196,15 @@
 
                     </div>
 
-                    <div class="carousel-caption d-none d-md-block">
+                    <div class="carousel-caption d-none d-md-block" onclick="window.location.href='/search/2'"
+                        style="cursor: pointer;">
                         <h5>Click to read</h5>
                         <p>Our blogs on foods and nutritions</p>
                     </div>
 
                 </div>
                 <div class="carousel-item"
-                    style="background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('https://images.unsplash.com/photo-1488926756850-a13b25e2f415?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1347&q=80') center center/cover;">
+                    style="background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('{{image.facts_top}}') center center/cover;">
 
                     <div class="headingText">
                         <span class="headingspan">
@@ -182,7 +217,8 @@
 
 
                     </div>
-                    <div class="carousel-caption d-none d-md-block">
+                    <div class="carousel-caption d-none d-md-block" onclick="window.location.href='/search/4'"
+                        style="cursor: pointer;">
                         <h5>Click to read</h5>
                         <p>Our blogs on tips and life hacks</p>
 
@@ -190,7 +226,7 @@
 
                 </div>
                 <div class="carousel-item"
-                    style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center center/cover;">
+                    style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('{{image.lifestyle_top}}') center center/cover;">
 
                     <div class="headingText">
                         <span class="headingspan">
@@ -203,7 +239,8 @@
 
 
                     </div>
-                    <div class="carousel-caption d-none d-md-block">
+                    <div class="carousel-caption d-none d-md-block" onclick="window.location.href='/search/1'"
+                        style="cursor: pointer;">
                         <h5>Click to read</h5>
                         <p>Our blogs on Lifestyle</p>
 
@@ -226,9 +263,8 @@
 
     </div>
     <div class="card">
-        <a href="/search/fitness">
-            <div class="cards"
-                style="  background: url('https://images.unsplash.com/photo-1581009137042-c552e485697a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')no-repeat center center /cover;">
+        <a href="/search/5">
+            <div class="cards" style="  background: url('{{image.fitness}}')no-repeat center center /cover;">
 
                 <div class="subject">Fitness</div>
                 <div class=" messege"> Read
@@ -236,9 +272,8 @@
 
             </div>
         </a>
-        <a href="/search/foods">
-            <div class="cards"
-                style="background: url('https://images.unsplash.com/photo-1506084868230-bb9d95c24759?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTV8fGZvb2R8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60') no-repeat center center /cover;">
+        <a href="/search/2">
+            <div class="cards" style="background: url('{{image.foods}}') no-repeat center center /cover;">
 
 
                 <div class="subject">Foods</div>
@@ -247,9 +282,8 @@
 
             </div>
         </a>
-        <a href="/search/lifestyle">
-            <div class="cards"
-                style="background: url('https://images.unsplash.com/photo-1578254969725-073c44760c7a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1490&q=80') no-repeat center center /cover;">
+        <a href="/search/1">
+            <div class="cards" style="background: url('{{image.lifestyle}}') no-repeat center center /cover;">
 
 
                 <div class="subject">Lifestyle</div>
@@ -273,91 +307,50 @@
         </div>
 
         <div class="column-recomendation">
-
+            {%for rec in recom|slice:":3"%}
             <div class="boxx">
-                <a href="/blog/1">
-                    <div class="box-1">
+                <a href="/blog/{{rec.auto_increment_id}}">
+                    <div class="box-1" style="  background: url('{{rec.thumbnail}}') center center/cover;">
                         <div class="view">View Post &rarr;</div>
 
 
                     </div>
                     <div class="box-text">
-                        How to be a billionare i was still prepare ...
+                        {{rec.title}}
                     </div>
                 </a>
 
 
             </div>
-            <div class="boxx">
-                <a href="/blog/1">
-                    <div class="box-1">
-                        <div class="view">View Post &rarr;</div>
+            {% endfor %}
 
 
-                    </div>
-                    <div class="box-text">
-                        How to be a billionare i was still prepare ...
-                    </div>
-                </a>
-
-
-            </div>
-            <div class="boxx">
-                <a href="/blog/1">
-                    <div class="box-1">
-                        <div class="view">View Post &rarr;</div>
-
-
-                    </div>
-                    <div class="box-text">
-                        How to be a billionare i was still prepare ...
-                    </div>
-                </a>
-
-
-            </div>
 
 
 
 
         </div>
         <div class="column-recomendation" style="    margin-top: 3em;" id="media">
+            {%for rec in recom|slice:"3:6"%}
             <div class="boxx">
-                <div class="box-1">
-                    <div class="view">View Post &rarr;</div>
+                <a href="/blog/{{rec.auto_increment_id}}">
+                    <div class="box-1" style="  background: url('{{rec.thumbnail}}') center center/cover;">
+                        <div class="view">View Post &rarr;</div>
 
 
-                </div>
-                <div class="box-text">
-                    How to be a billionare i was still prepare ...
-                </div>
+                    </div>
+                    <div class="box-text">
+                        {{rec.title}}
+                    </div>
+                </a>
 
 
             </div>
-            <div class="boxx">
-                <div class="box-1">
-                    <div class="view">View Post &rarr;</div>
+            {% endfor %}
 
 
-                </div>
-                <div class="box-text">
-                    How to be a billionare i was still prepare ...
-                </div>
 
 
-            </div>
-            <div class="boxx">
-                <div class="box-1">
-                    <div class="view">View Post &rarr;</div>
-
-
-                </div>
-                <div class="box-text">
-                    How to be a billionare i was still prepare ...
-                </div>
-
-
-            </div>
 
 
 
@@ -379,43 +372,36 @@
 
 
     <div class="blogs">
-        <div class="blog">
-            <a href="/blog/2" class="blog-anker">
-                <div class="blog-thumbnail">
-                    <div class="view">View Post &rarr;</div>
-                </div>
-                <div class="blog-title">
-                    this is a title
+        {%for blogs in blog|slice:"2:"%}
 
-                </div>
-                <div class="blog-concept">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis facere natus, adipisci vitae
-                    quia
-                    nam.
-                </div>
-            </a>
-
-        </div>
         <div class="blog">
-            <a href="/blog/2" class="blog-anker">
-                <div class="blog-thumbnail">
+            <a href="/blog/{{blogs.auto_increment_id}}">
+                <div class="blog-thumbnail"
+                    style=" background: url('{{blogs.thumbnail}}')no-repeat center center/cover;">
                     <div class="view">
                         View Post &rarr;
 
                     </div>
                 </div>
-                <div class="blog-title">
-                    this is a title
+            </a>
+            <a href="/blog/{{blogs.auto_increment_id}}" id="hover-title">
+                <div class="blog-title" style="line-height: 1.4;padding: 0em 1.1em;">
+                    {{blogs.title}}
 
-                </div>
-                <div class="blog-concept">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis facere natus, adipisci vitae
-                    quia
-                    nam.
                 </div>
             </a>
+            <div class="blog-concept" onclick="window.location.href='/blog/{{blogs.auto_increment_id}}'">
+                {{blogs.concept|slice:":100"}}...
+
+
+            </div>
+
+
 
         </div>
+
+        {% if forloop.counter|divisibleby:2 and forloop.counter > 0 and not forloop.last%}
+
 
     </div>
     <div class="space">
@@ -423,57 +409,21 @@
 
     </div>
     <div class="blogs">
-        <div class="blog">
-            <a href="/blog/2" class="blog-anker">
-                <div class="blog-thumbnail">
-                    <div class="view">View Post &rarr;</div>
-                </div>
-                <div class="blog-title">
-                    this is a title
-
-                </div>
-                <div class="blog-concept">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis facere natus, adipisci vitae
-                    quia
-                    nam.
-                </div>
-            </a>
-
-        </div>
-
-        <div class="blog">
-            <a href="/blog/2" class="blog-anker">
-                <div class="blog-thumbnail">
-                    <div class="view">
-                        View Post &rarr;
-
-                    </div>
-                </div>
-                <div class="blog-title">
-                    this is a title
-
-                </div>
-                <div class="blog-concept">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis facere natus, adipisci vitae
-                    quia
-                    nam.
-                </div>
-            </a>
-
-        </div>
 
 
-
+        {% elif forloop.last %}
     </div>
-    <div class="space">
-        advertisement
-
     </div>
+    {% endif %}
+    {% endfor %}
 
 
 
 
-    <div class="loadmore">
+
+
+
+    <div class="loadmore" id='loadmore' name='loadmore'>
         <button>Load more</button>
     </div>
     <div class="footer">
@@ -487,9 +437,9 @@
             <ul>
                 <li> <a href="/about">ABOUT</a> </li>
                 <li> <a href="/contact">CONTACT</a> </li>
-                <li> <a href="/search">LIFESTYLE</a> </li>
-                <li> <a href="/search">FOODS</a> </li>
-                <li> <a href="/search">GUIDE</a> </li>
+                <li> <a href="/search/1">LIFESTYLE</a> </li>
+                <li> <a href="/search/2">FOODS</a> </li>
+                <li> <a href="/search/3">GUIDE</a> </li>
 
             </ul>
         </div>
@@ -508,7 +458,56 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> -->
     <script>
+
+
+
+
+
+        // window.onload = function () {
+        let blog = document.getElementsByClassName('blogs')
+        let blogs = Array.from(blog)
+        let advertisement = document.getElementsByClassName('space')
+        let adds = Array.from(advertisement)
+        let loadmore = document.getElementById("loadmore")
+
+        blogs.slice(0, 5).forEach(function (e) {
+            e.style.display = 'flex'
+        })
+        adds.slice(0, 7).forEach(function (e) {
+            e.style.display = 'block'
+        })
+        var index = 8
+        loadmore.addEventListener('click', function () {
+            blogs.slice(0, index).forEach(function (e) {
+                e.style.display = 'flex'
+            })
+            adds.slice(0, index + 2).forEach(function (e) {
+                e.style.display = 'block'
+            })
+            index += 3
+            if (index > blogs.length) {
+                loadmore.style.display = 'none'
+            }
+
+        })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         $('.cards').on('mouseover', function () {
             $(this).children('.cards .messege ').css({ 'visibility': 'visible', 'transform': 'translateY(0px)', 'opacity': '1' })
 
@@ -654,6 +653,7 @@
             }
             prevScrollpos = currentScrollPos;
         }
+
 
 
 

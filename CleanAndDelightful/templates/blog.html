@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title> {{blog.title}}</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'css/navigation.css' %}">
@@ -161,11 +161,12 @@
         .quotes {
             font-family: 'ShopifySans', Helvetica, Arial, sans-serif;
             color: lightskyblue;
-            text-transform: uppercase;
             margin-top: 1em;
             text-align: center;
             font-weight: 700;
             text-shadow: 3px 4px 11px whitesmoke;
+            margin: 1em 0em;
+            line-height: 1.7;
 
 
         }
@@ -310,7 +311,7 @@
         }
 
 
-        @media only screen and (max-width:582px) {
+        @media only screen and (max-width:590px) {
 
             .blog-content {
                 font-size: 18px;
@@ -319,6 +320,7 @@
             .blog-heading {
                 font-size: 1.7em;
                 margin-top: 4em;
+                padding:0em 1em;
             }
 
             .blog-content {
@@ -403,6 +405,7 @@
         @media only screen and (max-width:456px) {
             .blog-content {
                 font-size: 17px;
+                line-height: 1.79;
 
             }
         }
@@ -650,11 +653,11 @@
            
 
                 <li><a href="/">Home</a></li>
-                <li><a href="/search/foods">Foods</a></li>
-                <li><a href="/search/lifestyle">Lifestyle</a></li>
-                <li><a href="/search/guide">Guide</a></li>
-                <li><a href="/search/facts">Facts</a></li>
-                <li><a href="/search/fitness">Fitness</a></li>
+                <li><a href="/search/2">Foods</a></li>
+                <li><a href="/search/1">Lifestyle</a></li>
+                <li><a href="/search/3">Guide</a></li>
+                <li><a href="/search/4">Facts</a></li>
+                <li><a href="/search/5">Fitness</a></li>
 
 
             </ul>
@@ -674,8 +677,8 @@
                 <img src="../static/icons/cross.png" alt="">
 
             </div>
-            <form action="/search" method="get">
-                <input type="text" placeholder="Enter keyword" spellcheck="false">
+            <form action="/search/keyword" method="get">
+                <input type="text" placeholder="Enter keyword" spellcheck="false" name="keyword">
                 <button type="submit"> Search </button>
 
 
@@ -700,27 +703,27 @@
             </li>
         </a>
 
-        <a href="/search/foods">
+        <a href="/search/2">
             <li>Foods<div class="arrow"><img src="../static/icons/arrow.png" alt="" style="height: 16px;"></div>
             </li>
         </a>
         <hr>
-        <a href="/search/lifestyle">
+        <a href="/search/1">
             <li>Lifestyle<div class="arrow"><img src="../static/icons/arrow.png" alt="" style="height: 16px;"></div>
             </li>
         </a>
         <hr>
-        <a href="/search/guide">
+        <a href="/search/3">
             <li>Guide<div class="arrow"><img src="../static/icons/arrow.png" alt="" style="height: 16px;"></div>
             </li>
         </a>
         <hr>
-        <a href="/search/facts">
+        <a href="/search/4">
             <li>Facts<div class="arrow"><img src="../static/icons/arrow.png" alt="" style="height: 16px;"></div>
             </li>
         </a>
         <hr>
-        <a href="/search/fitness">
+        <a href="/search/5">
             <li>Fitness<div class="arrow"><img src="../static/icons/arrow.png" alt="" style="height: 16px;"></div>
             </li>
         </a>

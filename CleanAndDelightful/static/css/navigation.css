@@ -247,22 +247,20 @@ input {
     filter: opacity(.2);
 }
 
-.search-image img {
+.search-image img { 
     height: 18px;
     transform: translate(10px, 0px);
     transition: all .2s ease;
+    margin-top: 5px;
 
 }
-
 #ham {
     height: 25px;
     transition: all .2s ease;
 }
-
 #ham:hover {
     opacity: .4;
 }
-
 .navlinks {
     font-family: Cabin, Helvetica, Arial, sans-serif;
     font-size: 16px;
@@ -273,10 +271,7 @@ input {
     transform: translateX(-100%);
     transition: transform 0.5s ease-in;
     z-index: 200;
-
 }
-
-/* .active {} */
 
 .navlinks li {
     list-style: none;
@@ -287,17 +282,7 @@ input {
     padding: 1.4em 0em;
     line-height: 1.2;
     margin: 0em 0em;
-
-    
-
-
-  
-
-
 }
-
-
-
 .navlinks ul:not(:first-child) {
     border-top: 1px #e9ecef solid;
 

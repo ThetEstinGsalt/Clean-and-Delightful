@@ -1,155 +1,138 @@
 {% extends 'base.html' %}
+{% load static %}
+
     {% block title %}
-        <title>Document</title>
+        <title>Clean and Delightful - {{keyword}}</title>
     {% endblock title %}
 
     {% block css %}
-       <link rel="stylesheet" href="../static/css/search.css">
+       <link rel="stylesheet" href="{%static '/css/search.css' %}">
 
     {% endblock css %}
     {% block plaincss %}
+        .blogs {
+            display: none;
+        }
+
+        .space {
+            display: none;
+        }
+        
+        @media only screen and (max-width: 670px) {
+            .blog-concept {
+        
+                padding: 0em 2.67em;
+                font-size: 1em;
+            }
+
+            .blog-title {
+                font-size: 1.64rem;
+            }
+        }
+
+        @media only screen and (max-width: 356px) {
+            .blog-title {
+                font-size: 1.4rem;
+            }
+        }
     {% endblock plaincss %}
  
 
 {% block body %}
    <div class="title-searchs">
-        <h1>Blogs on "keywords"</h1>
+        <h1>Blogs on "{{keyword}}" {{messege}}</h1>
 
     </div>
+
     <div class="blogs">
+    {%for blogs in blog%}
         <div class="blog">
-            <div class="blog-thumbnail">
+        <a href="/blog/{{blogs.auto_increment_id}}">
+            <div class="blog-thumbnail" style=" background: url('{{blogs.thumbnail}}')no-repeat center center/cover;">
                 <div class="view">
                     View Post &rarr;
 
                 </div>
             </div>
-            <div class="blog-title">
-                this is a title
+            <div class="blog-title" style="line-height: 1.4;padding: 0em 1.1em;">
+                {{blogs.title}}
 
             </div>
             <div class="blog-concept">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis facere natus, adipisci vitae quia
-                nam.
-            </div>
+                        {{blogs.concept|slice:":100"}}...
 
-        </div>
-        <div class="blog">
-            <div class="blog-thumbnail">
-                <div class="view">
-                    View Post &rarr;
-
-                </div>
+                
             </div>
-            <div class="blog-title">
-                this is a title
-
-            </div>
-            <div class="blog-concept">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis facere natus, adipisci vitae quia
-                nam.
-            </div>
+            </a>
 
         </div>
 
+    {% if forloop.counter|divisibleby:2 and forloop.counter > 0 and not forloop.last%}
+
+    
     </div>
     <div class="space">
         advertisement
 
     </div>
-    <div class="blogs">
-        <div class="blog">
-            <div class="blog-thumbnail">
-                <div class="view">
-                    View Post &rarr;
+     <div class="blogs">
 
-                </div>
-            </div>
-            <div class="blog-title">
-                this is a title
-
-            </div>
-            <div class="blog-concept">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis facere natus, adipisci vitae quia
-                nam.
-            </div>
-
+ 
+    {%  elif forloop.last %}
         </div>
-        <div class="blog">
-            <div class="blog-thumbnail">
-                <div class="view">
-                    View Post &rarr;
-
-                </div>
-            </div>
-            <div class="blog-title">
-                this is a title
-
-            </div>
-            <div class="blog-concept">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis facere natus, adipisci vitae quia
-                nam.
-            </div>
-
         </div>
-
-    </div>
-    <div class="space">
+    {% endif %}
+    {% endfor %}
+        
+    
+    
+     <div class="space">
         advertisement
 
     </div>
-    <div class="blogs">
-        <div class="blog">
-            <div class="blog-thumbnail">
-                <div class="view">
-                    View Post &rarr;
-
-                </div>
-            </div>
-            <div class="blog-title">
-                this is a title
-
-            </div>
-            <div class="blog-concept">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis facere natus, adipisci vitae quia
-                nam.
-            </div>
-
-        </div>
-        <div class="blog">
-            <div class="blog-thumbnail">
-                <div class="view">
-                    View Post &rarr;
-
-                </div>
-            </div>
-            <div class="blog-title">
-                this is a title
-
-            </div>
-            <div class="blog-concept">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis facere natus, adipisci vitae quia
-                nam.
-            </div>
-
-        </div>
-
-    </div>
-    <div class="space">
-        advertisement
-
-    </div>
-    <div class="loadmore">
+    <div class="loadmore" id="loadmore" name="loadmore">
         <button>Load more</button>
     </div>
 
 {% endblock body %}
 {% block js %}
-       $('.blog-thumbnail').on('mouseover', function () {
+         $('.blog-thumbnail').on('mouseover', function () {
             $(this).children('.blog-thumbnail .view').css({ 'visibility': 'visible', 'transform': 'translateY(0px)', 'opacity': '1' })
 
         }).on('mouseleave', function () {
             $('.blog-thumbnail .view').css({ 'transform': 'translateY(50px)', 'opacity': '0', 'visibility': 'hidden' })
         })
 
+        let blog = document.getElementsByClassName('blogs')
+        let blogs = Array.from(blog)
+        let advertisement = document.getElementsByClassName('space')
+        let adds = Array.from(advertisement)
+        let loadmore = document.getElementById("loadmore")
+         
+
+        blogs.slice(0, 6).forEach(function (e) {
+            e.style.display = 'flex'
+        })
+        adds.slice(0, 6).forEach(function (e) {
+            e.style.display = 'block'
+        })
+        var index = 4
+  
+        loadmore.addEventListener("click", function () {
+            blogs.slice(0, index).forEach(function (e) {
+                e.style.display = 'flex'
+            })
+            adds.slice(0, index ).forEach(function (e) {
+                e.style.display = 'block'
+            })
+            index += 4
+            if (index > blogs.length || index-1==blogs.length) {
+            loadmore.style.display = 'none'
+        }
+       
+
+        })
+
+
+      
 {% endblock js %}

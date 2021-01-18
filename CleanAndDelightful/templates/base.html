@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,11 +11,10 @@
     {% endblock title %}
     {% block css %}
     {% endblock css %}
-    <link rel="stylesheet" href="../static/css/navigation.css">
-    <link rel="stylesheet" href="../static/css/footer.css">
+    <link rel="stylesheet" href=" {% static '/css/navigation.css' %} ">
+    <link rel="stylesheet" href=" {% static '/css/footer.css' %}">
 
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@500&display=swap');
@@ -72,11 +72,11 @@
             <ul>
 
                 <li><a href="/">Home</a></li>
-                <li><a href="/search/foods">Foods</a></li>
-                <li><a href="/search/lifestyle">Lifestyle</a></li>
-                <li><a href="/search/guide">Guide</a></li>
-                <li><a href="/search/facts">Facts</a></li>
-                <li><a href="/search/fitness">Fitness</a></li>
+                <li><a href="/search/2">Foods</a></li>
+                <li><a href="/search/1">Lifestyle</a></li>
+                <li><a href="/search/3">Guide</a></li>
+                <li><a href="/search/4">Facts</a></li>
+                <li><a href="/search/5">Fitness</a></li>
 
 
 
@@ -91,13 +91,13 @@
         </div>
 
     </nav>
-    <div class="searchbar">
+    <div class="searchbar" style="z-index:100000;">
         <div class="input">
             <div id="searchcross">
                 <img src="../static/icons/cross.png" alt="">
 
             </div>
-            <form action="/search" method="get">
+            <form action="/search/keyword" method="get">
                 <input type="text" placeholder="Enter keyword" spellcheck="false" name="keyword">
                 <button type="submit"> Search </button>
 
@@ -123,27 +123,27 @@
             </li>
         </a>
 
-        <a href="/search/foods">
+        <a href="/search/2">
             <li>Foods<div class="arrow"><img src="../static/icons/arrow.png" alt="" style="height: 16px;"></div>
             </li>
         </a>
         <hr>
-        <a href="/search/lifestyle">
+        <a href="/search/1">
             <li>Lifestyle<div class="arrow"><img src="../static/icons/arrow.png" alt="" style="height: 16px;"></div>
             </li>
         </a>
         <hr>
-        <a href="/search/guide">
+        <a href="/search/3">
             <li>Guide<div class="arrow"><img src="../static/icons/arrow.png" alt="" style="height: 16px;"></div>
             </li>
         </a>
         <hr>
-        <a href="/search/facts">
+        <a href="/search/4">
             <li>Facts<div class="arrow"><img src="../static/icons/arrow.png" alt="" style="height: 16px;"></div>
             </li>
         </a>
         <hr>
-        <a href="/search/fitness">
+        <a href="/search/5">
             <li>Fitness<div class="arrow"><img src="../static/icons/arrow.png" alt="" style="height: 16px;"></div>
             </li>
         </a>
@@ -190,9 +190,9 @@
             <ul>
                 <li><a href="/about">ABOUT</a> </li>
                 <li><a href="/contact">CONTACT</a> </li>
-                <li><a href="/search">LIFESTYLE</a> </li>
-                <li><a href="/search">FOODS</a> </li>
-                <li><a href="/search">GUIDE</a> </li>
+                <li><a href="/search/1">LIFESTYLE</a> </li>
+                <li><a href="/search/2">FOODS</a> </li>
+                <li><a href="/search/5">GUIDE</a> </li>
 
 
             </ul>

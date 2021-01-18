@@ -799,7 +799,7 @@ input:focus {
     align-items: center;
     font-family: 'Cabin', sans-serif;
     text-align: center;
-    background: url('https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center center/cover;
+  
     /* linear-gradient(rgba(0, 0, 0, 0.23), rgba(0, 0, 0, 0.23)), */
     transition: .3s all ease;
 
@@ -899,6 +899,7 @@ input:focus {
     letter-spacing: 0;
     margin-top: 1.39rem;
 
+
 }
 
 .blog-concept {
@@ -959,6 +960,7 @@ input:focus {
 }
 
 @media only screen and (max-width: 635px) {
+  
     .blog-thumbnail {
         height: 70vw;
         margin: 1em 1.5em;
@@ -969,6 +971,7 @@ input:focus {
         margin: 0em 1.3em;
         max-width: 100%;
     }
+    
 }
 
 .loadmore button {

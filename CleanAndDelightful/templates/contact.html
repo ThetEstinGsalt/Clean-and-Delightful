@@ -28,9 +28,8 @@
             <br>
             <br id="display">
             <div class="text">
-
-                We appreciate feedback and interaction of any sort so please feel free to get in touch. We like to hear
-                from brands, media agencies, PRs, retailers, and our readers.
+                {{contact.text}}
+                
             </div>
             <form action="/contact" method="post">
             {% csrf_token %}
